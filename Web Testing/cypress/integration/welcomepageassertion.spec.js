@@ -9,6 +9,7 @@ describe('Welcome Page text assertions', () =>{
     })
 
 
+    
     it.only('1st panel texts test', () => {
 
         cy.get('a[aria-label="Tumblr"]').contains('Tumblr').should('exist');
