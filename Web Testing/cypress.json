@@ -1,1 +1,24 @@
-{}
+{
+    "viewportWidth": 1200,
+    "viewportHeight": 800,
+    "experimentalStudio": true,
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quite": true,
+            "overwrite": false,
+            "video": false,
+            "html": true,
+            "json": true
+        }
+    },
+    "env": {
+        "MAILSLURP_API_KEY": "df9f029ca887b5e42601cd9efa4f909bdeb8bfd5ce365cda9a660d33df216582"
+      },
+      "defaultCommandTimeout": 30000,
+    "responseTimeout": 30000,
+    "requestTimeout": 30000
+}
+

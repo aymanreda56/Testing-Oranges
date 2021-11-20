@@ -1,6 +1,6 @@
 /// <reference types ="cypress" />
 
-const { contains } = require("cypress/types/jquery");
+//const { contains } = require("cypress/types/jquery");
 
 describe('Welcome Page text assertions', () =>{
 
@@ -12,8 +12,7 @@ describe('Welcome Page text assertions', () =>{
     
     it.only('1st panel texts test', () => {
 
-        cy.get('a[aria-label="Tumblr"]')
-        .contains('Tumblr').should('exist');
+
 
         cy.get('section[id="Get started"]')
         .contains('Make stuff, look at stuff, talk about stuff, find your people.')
