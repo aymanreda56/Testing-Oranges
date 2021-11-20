@@ -1,42 +1,45 @@
-
-
-const Page = require('./page');
-
-/**
- * sub page containing specific selectors and methods for a specific page
- */
-class LoginPage extends Page {
-    /**
-     * define selectors using getter methods
-     */
-    get inputUsername() {
-        return $('#username');
+class LoginPage  {
+    
+    get loginButton() {
+        return $('com.tumblr:id/login_button');
     }
 
-    get inputPassword() {
-        return $('#password');
+    get loginWithEmailButton() {
+        return $('com.tumblr:id/email_auth_button');
     }
 
-    get btnSubmit() {
-        return $('button[type="submit"]');
+    get emailTextBox() {
+        return $('com.tumblr:id/email');
+    }
+    
+    get continueButton(){
+        return $('~primary_button');
     }
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-    async login (username, password) {
-        await this.inputUsername.setValue(username);
+    get clearButton(){
+        return $('~clear_button');
+    }
+
+    get enterPassword(){
+        return $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView');
+    }
+
+    get passwordTextBox(){
+        return $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[2]');
+    }
+
+    get loginLastStep(){
+        return $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.Button');
+    }
+
+    
+    /*async login (username, password) {
+        await this.emailTextBox.setValue(username);
         await this.inputPassword.setValue(password);
         await this.btnSubmit.click();
-    }
+    }*/
 
-    /**
-     * overwrite specific options to adapt it to page object
-     */
-    open() {
-        return super.open('login');
-    }
+    
 }
 
 module.exports = new LoginPage();

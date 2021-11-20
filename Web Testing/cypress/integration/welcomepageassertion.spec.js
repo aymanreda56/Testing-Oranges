@@ -12,20 +12,40 @@ describe('Welcome Page text assertions', () =>{
     
     it.only('1st panel texts test', () => {
 
-        cy.get('a[aria-label="Tumblr"]').should('exist');
 
-        cy.get('section[id="Get started"]').contains('Make stuff, look at stuff, talk about stuff, find your people.').should('exist');
-        cy.get('section[id="Get started"]').contains('By continuing with the options below, you agree to Tumblr’s Terms of Service and have read the Privacy Policy').should('exist');
-        cy.get('section[id="Get started"]').contains("Here's what's trending").should('exist');
+
+        cy.get('section[id="Get started"]')
+        .contains('Make stuff, look at stuff, talk about stuff, find your people.')
+        .should('exist');
+
+        cy.get('section[id="Get started"]')
+        .contains('By continuing with the options below, you agree to Tumblr’s Terms of Service and have read the Privacy Policy')
+        .should('exist');
+
+        cy.get('section[id="Get started"]')
+        .contains("Here's what's trending")
+        .should('exist');
         
-        cy.get('section[id="Get started"]').contains('Continue with Google').should('exist');
-        cy.get('section[id="Get started"]').contains('Continue with Apple').should('exist');
+        cy.get('section[id="Get started"]')
+        .contains('Continue with Google')
+        .should('exist');
+
+        cy.get('section[id="Get started"]')
+        .contains('Continue with Apple')
+        .should('exist');
         
-        cy.get('section[id="Get started"]').contains('Log in').should('exist');
-        cy.get('section[id="Get started"]').contains('Sign up').should('exist');
+        cy.get('section[id="Get started"]')
+        .contains('Log in').should('exist');
+        cy.get('section[id="Get started"]').contains('Sign up')
+        .should('exist');
         
-        cy.get('[class="Z8Ux2 qjTo7 IMvK3"]').contains('Log in').should('exist');    // garbage class
-        cy.get('[class="Z8Ux2 qjTo7 IMvK3"]').contains('Sign up').should('exist');   // garbage class
+        cy.get('[class="Z8Ux2 qjTo7 IMvK3"]')
+        .contains('Log in')
+        .should('exist');    // garbage class
+
+        cy.get('[class="Z8Ux2 qjTo7 IMvK3"]')
+        .contains('Sign up')
+        .should('exist');   // garbage class
         
 
         cy.get('footer[role="contentinfo"]').contains('Terms').should('exist');
