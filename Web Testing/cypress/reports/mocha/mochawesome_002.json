@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "tests": 4,
+    "passes": 2,
     "pending": 0,
-    "failures": 0,
-    "start": "2021-11-20T00:49:59.175Z",
-    "end": "2021-11-20T00:50:04.925Z",
-    "duration": 5750,
-    "testsRegistered": 1,
-    "passPercent": 100,
+    "failures": 2,
+    "start": "2021-11-20T18:58:22.082Z",
+    "end": "2021-11-20T18:59:43.188Z",
+    "duration": 81106,
+    "testsRegistered": 4,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "2dee4118-9bbf-41fd-8416-1a945b236aea",
+      "uuid": "920b96ea-e599-4e46-9b54-35bda480d43e",
       "title": "",
       "fullFile": "cypress/integration/welcomepageassertion.spec.js",
       "file": "cypress/integration/welcomepageassertion.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e62d0a4f-93c2-4457-9353-790562bc5ed4",
+          "uuid": "1635700f-eb80-4b54-98ee-7ff407a5d008",
           "title": "Welcome Page text assertions",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1st panel texts test",
               "fullTitle": "Welcome Page text assertions 1st panel texts test",
               "timedOut": null,
-              "duration": 2862,
+              "duration": 3936,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,86 @@
               "context": null,
               "code": "cy.get('a[aria-label=\"Tumblr\"]').should('exist');\ncy.get('section[id=\"Get started\"]').contains('Make stuff, look at stuff, talk about stuff, find your people.').should('exist');\ncy.get('section[id=\"Get started\"]').contains('By continuing with the options below, you agree to Tumblr’s Terms of Service and have read the Privacy Policy').should('exist');\ncy.get('section[id=\"Get started\"]').contains(\"Here's what's trending\").should('exist');\ncy.get('section[id=\"Get started\"]').contains('Continue with Google').should('exist');\ncy.get('section[id=\"Get started\"]').contains('Continue with Apple').should('exist');\ncy.get('section[id=\"Get started\"]').contains('Log in').should('exist');\ncy.get('section[id=\"Get started\"]').contains('Sign up').should('exist');\ncy.get('[class=\"Z8Ux2 qjTo7 IMvK3\"]').contains('Log in').should('exist'); // garbage class\ncy.get('[class=\"Z8Ux2 qjTo7 IMvK3\"]').contains('Sign up').should('exist'); // garbage class\ncy.get('footer[role=\"contentinfo\"]').contains('Terms').should('exist');\ncy.get('footer[role=\"contentinfo\"]').contains('Privacy').should('exist');\ncy.get('footer[role=\"contentinfo\"]').contains('Jobs').should('exist');\ncy.get('footer[role=\"contentinfo\"]').contains('Support').should('exist');",
               "err": {},
-              "uuid": "38af8bd8-da5d-4621-b0a9-624ae131b641",
-              "parentUUID": "e62d0a4f-93c2-4457-9353-790562bc5ed4",
+              "uuid": "78c06136-8421-437f-acae-222e33c7e2f6",
+              "parentUUID": "1635700f-eb80-4b54-98ee-7ff407a5d008",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2nd panel text test",
+              "fullTitle": "Welcome Page text assertions 2nd panel text test",
+              "timedOut": null,
+              "duration": 33260,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('section[id=\"Get started\"]').contains('What is Tumblr?').should('exist');\ncy.get('section[id=\"Easy to use\"]').contains('Tumblr is so easy to use that it’s hard to explain.').should('exist');\ncy.get('section[id=\"Easy to use\"]').contains(\"We made it really, really simple for people to make a blog and put whatever they want on it. Stories, photos, GIFs, TV shows, links, quips, dumb jokes, smart jokes, Spotify tracks, mp3s, videos, fashion, art, deep stuff. Tumblr is 536 million different blogs, filled with literally whatever.\").should('exist');\ncy.get('section[id=\"Easy to use\"]').contains('Tumblr is so easy to use that it’s hard to explain.').should('exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 30000ms: Expected to find content: 'We made it really, really simple for people to make a blog and put whatever they want on it. Stories, photos, GIFs, TV shows, links, quips, dumb jokes, smart jokes, Spotify tracks, mp3s, videos, fashion, art, deep stuff. Tumblr is 536 million different blogs, filled with literally whatever.' within the element: <section#Easy to use.thwmc> but never did.",
+                "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find content: 'We made it really, really simple for people to make a blog and put whatever they want on it. Stories, photos, GIFs, TV shows, links, quips, dumb jokes, smart jokes, Spotify tracks, mp3s, videos, fashion, art, deep stuff. Tumblr is 536 million different blogs, filled with literally whatever.' within the element: <section#Easy to use.thwmc> but never did.\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\welcomepageassertion.spec.js:126:345)",
+                "diff": null
+              },
+              "uuid": "976e6df6-68d1-46cb-be92-0ed082651867",
+              "parentUUID": "1635700f-eb80-4b54-98ee-7ff407a5d008",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3rd panel text tests",
+              "fullTitle": "Welcome Page text assertions 3rd panel text tests",
+              "timedOut": null,
+              "duration": 2828,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "0faedb8b-f6c9-4560-b9e5-05b1523da7fa",
+              "parentUUID": "1635700f-eb80-4b54-98ee-7ff407a5d008",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "1st panel links tests",
+              "fullTitle": "Welcome Page text assertions 1st panel links tests",
+              "timedOut": null,
+              "duration": 34320,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('svg[viewBox=\"0 0 21 36.8\"]').click();\ncy.url().should('include', '/');\ncy.get('a[aria-label=\"Tumblr\"]').click();\ncy.url().should('include', '/'); //cy.get('section[id =\"Get started\"]').contains('Sign up').click();\n//cy.url().should('include', '/register');\n//cy.go('back');\ncy.get('section[id =\"Get started\"]').contains('Terms of Service').click();\ncy.url().should('include', '/policy');\ncy.go('back');\ncy.get('section[id =\"Get started\"]').contains('Privacy Policy').click();\ncy.url().should('include', '/privacy');\ncy.go('back'); //privacy\n//policy",
+              "err": {
+                "message": "CypressError: Timed out retrying after 30050ms: `cy.click()` failed because this element:\n\n`<a href=\"/\" aria-label=\"Tumblr\">...</a>`\n\nis being covered by another element:\n\n`<header class=\"_3kR_\">...</header>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 30050ms: `cy.click()` failed because this element:\n\n`<a href=\"/\" aria-label=\"Tumblr\">...</a>`\n\nis being covered by another element:\n\n`<header class=\"_3kR_\">...</header>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://www.tumblr.com/__cypress/runner/cypress_runner.js:160723:87)\n    at ensureDescendents (https://www.tumblr.com/__cypress/runner/cypress_runner.js:147550:8)\n    at ensureDescendentsAndScroll (https://www.tumblr.com/__cypress/runner/cypress_runner.js:147557:14)\n    at ensureElIsNotCovered (https://www.tumblr.com/__cypress/runner/cypress_runner.js:147691:5)\n    at runAllChecks (https://www.tumblr.com/__cypress/runner/cypress_runner.js:147878:52)\n    at retryActionability (https://www.tumblr.com/__cypress/runner/cypress_runner.js:147901:16)\n    at tryCatcher (https://www.tumblr.com/__cypress/runner/cypress_runner.js:13212:23)\n    at Function.Promise.attempt.Promise.try (https://www.tumblr.com/__cypress/runner/cypress_runner.js:10486:29)\n    at tryFn (https://www.tumblr.com/__cypress/runner/cypress_runner.js:165383:61)\n    at whenStable (https://www.tumblr.com/__cypress/runner/cypress_runner.js:165422:14)\n    at https://www.tumblr.com/__cypress/runner/cypress_runner.js:164909:18\n    at tryCatcher (https://www.tumblr.com/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (https://www.tumblr.com/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (https://www.tumblr.com/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (https://www.tumblr.com/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (https://www.tumblr.com/__cypress/runner/cypress_runner.js:11329:18)\nFrom Your Spec Code:\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\welcomepageassertion.spec.js:133:38)",
+                "diff": null
+              },
+              "uuid": "d055bb82-7c73-4f37-a233-e0878c77525c",
+              "parentUUID": "1635700f-eb80-4b54-98ee-7ff407a5d008",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "38af8bd8-da5d-4621-b0a9-624ae131b641"
+            "78c06136-8421-437f-acae-222e33c7e2f6",
+            "0faedb8b-f6c9-4560-b9e5-05b1523da7fa"
           ],
-          "failures": [],
+          "failures": [
+            "976e6df6-68d1-46cb-be92-0ed082651867",
+            "d055bb82-7c73-4f37-a233-e0878c77525c"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 2862,
+          "duration": 74344,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

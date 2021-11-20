@@ -50,7 +50,8 @@ describe('signup',function (){
     })
 
     it('when reload the page the background changes',()=>{
-
+      cy
+        .wait(4000);
       cy
         .get('[loading="lazy"]')
         .invoke('attr', 'srcset')
@@ -58,7 +59,7 @@ describe('signup',function (){
           cy
             .reload();
           cy
-            .wait(2000);
+            .wait(4000);
           cy
             .get('[loading="lazy"]')
             .invoke('attr', 'srcset')
@@ -147,22 +148,33 @@ describe('signup',function (){
           .should('have.text','You forgot to enter your email!');
     })
 
-    it('non existing email and empty password and existing blog name',()=>{
-        cy
-          .get('[name=email]')
-          .type('ahmedmad@gmail.com');
+    it('non existing email and empty password and existing blog name',function (){
         
-        cy
-          .get('[name=blogName]')
-          .type('qseeda');
+      cy
+        .mailslurp()
+        .then(mailslurp => mailslurp.createInbox())
+        .then(inbox => {
+          // save inbox id and email address to this (make sure you use function and not arrow syntax)
+          cy.wrap(inbox.id).as('inboxId')
+          cy.wrap(inbox.emailAddress).as('emailAddress')
 
-        cy
-          .get('[aria-label="Sign up"]')
-          .click();
-       
-        cy
-          .get('[data-has-error="true"]')
-          .should('have.text','You forgot to enter your password!');
+          cy
+          .get('[name=email]')
+          .type(inbox.emailAddress);
+        
+          cy
+            .get('[name=blogName]')
+            .type('qseeda');
+
+          cy
+            .get('[aria-label="Sign up"]')
+            .click();
+        
+          cy
+            .get('[data-has-error="true"]')
+            .should('have.text','You forgot to enter your password!');
+        })
+        
     })
 
     it('existing email and empty password and blog name',()=>{
@@ -183,29 +195,49 @@ describe('signup',function (){
           .should('have.text','You forgot to enter your password!');
     })
 
-    it('non existing email and incorrect(short password less than 8) password and existing blog name',()=>{
-        cy
+    it('non existing email and incorrect(short password less than 8) password and existing blog name',function (){
+      cy
+        .mailslurp()
+        .then(mailslurp => mailslurp.createInbox())
+        .then(inbox => {
+          // save inbox id and email address to this (make sure you use function and not arrow syntax)
+          cy.wrap(inbox.id).as('inboxId')
+          cy.wrap(inbox.emailAddress).as('emailAddress')
+
+          cy
           .get('[name=email]')
-          .type('zmmgsatyquecmmrbll@pptrvv.com');
+          .type(inbox.emailAddress);
 
-        cy
-          .get('[name=password]')
-          .type('asdfg');
+          cy
+            .get('[name=password]')
+            .type('asdfg');
 
-        cy
-          .get('[name=blogName]')
-          .type('qseeda');
+          cy
+            .get('[name=blogName]')
+            .type('qseeda');
+          
+          cy
+            .get('[aria-label="Sign up"]')
+            .click();
         
-        cy
-          .get('[aria-label="Sign up"]')
-          .click();
-       
-        cy
-          .get('[data-has-error="true"]')
-          .should('have.text','The password must be at least 8 characters.');
+          cy
+            .get('[data-has-error="true"]')
+            .should('have.text','The password must be at least 8 characters.');
+            
+        })  
+      
+        
     })
 
-    it('non existing email and correct password and existing blog name',()=>{
+    it('non existing email and correct password and existing blog name',function (){
+      cy
+      .mailslurp()
+      .then(mailslurp => mailslurp.createInbox())
+      .then(inbox => {
+        // save inbox id and email address to this (make sure you use function and not arrow syntax)
+        cy.wrap(inbox.id).as('inboxId')
+        cy.wrap(inbox.emailAddress).as('emailAddress')
+
         cy
           .get('[name=email]')
           .type('zmmgsatyquecmmrbll@pptrvv.com');
@@ -226,6 +258,9 @@ describe('signup',function (){
         cy
           .get('[data-has-error="true"]')
           .should('have.text',"That's a good blog name, but it's taken.");
+          
+      })
+            
     })
 
     it('existing email and password and blog name',()=>{
@@ -250,115 +285,7 @@ describe('signup',function (){
           .should('have.text','This email address is already in use.');
     })
     
-    it('non existing email and correct password and non existing blog name',()=>{
-        cy
-          .get('[name=email]')
-          .type('hpu85558@cuoly.com');
-
-        cy
-          .get('[name=password]')
-          .type('y35SYi:7@+dK7J');
-
-        cy
-          .get('[name=blogName]')
-          .type('qseeda1006');
-        
-        cy
-          .get('[aria-label="Sign up"]')
-          .click();
-       
-        cy
-          .get('[name="age"]')
-          .invoke('attr','placeholder')
-          .should('eq', 'How old are you?');
-    })
-
-   it('non existing email and correct password and non existing blog name but negative age',()=>{
-        cy
-          .get('[name=email]')
-          .type('hpu85558@cuoly.com');
-
-        cy
-          .get('[name=password]')
-          .type('y35SYi:7@+dK7J');
-
-        cy
-          .get('[name=blogName]')
-          .type('qseeda1006');
-        
-        cy
-          .get('[aria-label="Sign up"]')
-          .click();
-       
-        cy
-          .get('[name="age"]')
-          .type('-1');
-          
-        cy
-          .get('[aria-label="Next"]')
-          .click();
-        
-        cy
-          .get('[data-has-error="true"]')
-          .should('have.text',"That's not a valid age. Please try again.");
-    })
-
-    it('non existing email and correct password and non existing blog name but zero age',()=>{
-      cy
-        .get('[name=email]')
-        .type('hpu85558@cuoly.com');
-
-      cy
-        .get('[name=password]')
-        .type('y35SYi:7@+dK7J');
-
-      cy
-        .get('[name=blogName]')
-        .type('qseeda1006');
-      
-      cy
-        .get('[aria-label="Sign up"]')
-        .click();
-     
-      cy
-        .get('[name="age"]')
-        .type('0');
-        
-      cy
-        .get('[aria-label="Next"]')
-        .click();
-      
-      cy
-        .get('[data-has-error="true"]')
-        .should('have.text',"Oops. There was an error. Please try again.");
-    })
-    it('non existing email and correct password and non existing blog name but no age',()=>{
-      cy
-        .get('[name=email]')
-        .type('hpu85558@cuoly.com');
-
-      cy
-        .get('[name=password]')
-        .type('y35SYi:7@+dK7J');
-
-      cy
-        .get('[name=blogName]')
-        .type('qseeda1006');
-      
-      cy
-        .get('[aria-label="Sign up"]')
-        .click();
-        
-      cy
-        .get('[aria-label="Next"]')
-        .click();
-      
-      cy
-        .get('[data-has-error="true"]')
-        .should('have.text',"You forgot to enter your age!");
-    })
-
-    it('non existing email and correct password and non existing blog name and valid age', function (){
+    it('non existing email and correct password and existing blog name',function (){
       cy
         .mailslurp()
         .then(mailslurp => mailslurp.createInbox())
@@ -367,8 +294,6 @@ describe('signup',function (){
           cy.wrap(inbox.id).as('inboxId')
           cy.wrap(inbox.emailAddress).as('emailAddress')
 
-          cy.log('id',inbox.id);
-          cy.log('email',inbox.emailAddress);
           cy
             .get('[name=email]')
             .type(inbox.emailAddress);
@@ -379,7 +304,156 @@ describe('signup',function (){
 
           cy
             .get('[name=blogName]')
-            .type('fsjsafhhf');
+            .type('qseeda');
+          
+          cy
+            .get('[aria-label="Sign up"]')
+            .click();
+        
+          cy
+            .get('[data-has-error="true"]')
+            .should('have.text', "That's a good blog name, but it's taken.");
+            
+        })
+
+    })
+
+    it('non existing email and correct password and non existing blog name',function (){
+      cy
+        .mailslurp()
+        .then(mailslurp => mailslurp.createInbox())
+        .then(inbox => {
+          // save inbox id and email address to this (make sure you use function and not arrow syntax)
+          cy.wrap(inbox.id).as('inboxId')
+          cy.wrap(inbox.emailAddress).as('emailAddress')
+
+               
+        cy
+          .get('[name=email]')
+          .type(inbox.emailAddress);
+
+        cy
+          .get('[name=password]')
+          .type('y35SYi:7@+dK7J');
+
+        cy
+          .get('[name=blogName]')
+          .type('w'+inbox.id.slice(0,27));
+        
+        cy
+          .get('[aria-label="Sign up"]')
+          .click();
+      
+        cy
+          .get('[name="age"]')
+          .invoke('attr','placeholder')
+          .should('eq', 'How old are you?');
+            
+        }) 
+ 
+    })
+
+   it('non existing email and correct password and non existing blog name but negative age',function (){
+      cy
+        .mailslurp()
+        .then(mailslurp => mailslurp.createInbox())
+        .then(inbox => {
+          // save inbox id and email address to this (make sure you use function and not arrow syntax)
+          cy.wrap(inbox.id).as('inboxId')
+          cy.wrap(inbox.emailAddress).as('emailAddress')
+          cy
+            .get('[name=email]')
+            .type(inbox.emailAddress);
+
+          cy
+            .get('[name=password]')
+            .type('y35SYi:7@+dK7J');
+
+          cy
+            .get('[name=blogName]')
+            .type('q'+inbox.id.slice(0,27));
+          
+          cy
+            .get('[aria-label="Sign up"]')
+            .click();
+        
+          cy
+            .get('[name="age"]')
+            .type('-1');
+            
+          cy
+            .get('[aria-label="Next"]')
+            .click();
+          
+          cy
+            .get('[data-has-error="true"]')
+            .should('have.text',"That's not a valid age. Please try again.");
+        })    
+    })
+
+    it('non existing email and correct password and non existing blog name but zero age',function (){
+      cy
+        .mailslurp()
+        .then(mailslurp => mailslurp.createInbox())
+        .then(inbox => {
+          // save inbox id and email address to this (make sure you use function and not arrow syntax)
+          cy.wrap(inbox.id).as('inboxId')
+          cy.wrap(inbox.emailAddress).as('emailAddress')
+
+          cy
+            .get('[name=email]')
+            .type(inbox.emailAddress);
+
+          cy
+            .get('[name=password]')
+            .type('y35SYi:7@+dK7J');
+
+          cy
+            .get('[name=blogName]')
+            .type('t'+inbox.id.slice(0,27));
+          
+          cy
+            .get('[aria-label="Sign up"]')
+            .click();
+        
+          cy
+            .get('[name="age"]')
+            .type('0');
+            
+          cy
+            .get('[aria-label="Next"]')
+            .click();
+          
+          cy
+            .get('[data-has-error="true"]')
+            .should('have.text',"Oops. There was an error. Please try again.");
+            
+        })
+
+      
+    })
+
+    it('non existing email and correct password and non existing blog name but no age',function (){
+       cy
+        .mailslurp()
+        .then(mailslurp => mailslurp.createInbox())
+        .then(inbox => {
+          // save inbox id and email address to this (make sure you use function and not arrow syntax)
+          cy.wrap(inbox.id).as('inboxId')
+          cy.wrap(inbox.emailAddress).as('emailAddress')
+
+          //
+          cy
+            .get('[name=email]')
+            .type(inbox.emailAddress);
+
+          cy
+            .get('[name=password]')
+            .type('y35SYi:7@+dK7J');
+
+          cy
+            .get('[name=blogName]')
+            .type('a'+inbox.id.slice(0,27));
           
           cy
             .get('[aria-label="Sign up"]')
@@ -396,10 +470,85 @@ describe('signup',function (){
           cy.url().should('include','/getting_to_know_tumblr');
             
         })
+    })
 
-      
-      
+    it('non existing email and correct password and non existing blog name and valid age', function (){
+      cy
+        .mailslurp()
+        .then(mailslurp => mailslurp.createInbox())
+        .then(inbox => {
+          // save inbox id and email address to this (make sure you use function and not arrow syntax)
+          cy.wrap(inbox.id).as('inboxId')
+          cy.wrap(inbox.emailAddress).as('emailAddress')
 
+          cy
+            .get('[name=email]')
+            .type(inbox.emailAddress);
+
+          cy
+            .get('[name=password]')
+            .type('y35SYi:7@+dK7J');
+
+          cy
+            .get('[name=blogName]')
+            .type('a'+inbox.id.slice(0,27));
+          
+          cy
+            .get('[aria-label="Sign up"]')
+            .click();
+
+          cy
+            .get('[name="age"]')
+            .type('21');
+            
+          cy
+            .get('[aria-label="Next"]')
+            .click();
+
+          cy.url().should('include','/getting_to_know_tumblr');
+            
+        })
+    })
+    it('non existing email and correct password and non existing blog name and valid age then skip button', function (){
+      cy
+        .mailslurp()
+        .then(mailslurp => mailslurp.createInbox())
+        .then(inbox => {
+          // save inbox id and email address to this (make sure you use function and not arrow syntax)
+          cy.wrap(inbox.id).as('inboxId')
+          cy.wrap(inbox.emailAddress).as('emailAddress')
+
+          //
+          cy
+            .get('[name=email]')
+            .type(inbox.emailAddress);
+
+          cy
+            .get('[name=password]')
+            .type('y35SYi:7@+dK7J');
+
+          cy
+            .get('[name=blogName]')
+            .type('y'+inbox.id.slice(0,27));
+          
+          cy
+            .get('[aria-label="Sign up"]')
+            .click();
+
+          cy
+            .get('[name="age"]')
+            .type('21');
+            
+          cy
+            .get('[aria-label="Next"]')
+            .click();
+          cy
+            .get('.onboarding-skip-button')
+            .click();
+
+          cy.url().should('include','https://www.tumblr.com/dashboard');
+            
+        })
     })
  
 })
