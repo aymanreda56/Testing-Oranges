@@ -85,7 +85,7 @@ describe('login',()=>{
           .click();
        
         cy
-          .get('.oFCPF')
+          .get('[data-has-error="true"]')
           .should('have.text','You do have to fill this stuff out, you know.');
     })
 
@@ -99,7 +99,7 @@ describe('login',()=>{
           .click();
        
         cy
-          .get('.oFCPF')
+          .get('[data-has-error="true"]')
           .should('have.text','You forgot to enter your email!');
     })
 
@@ -113,7 +113,7 @@ describe('login',()=>{
           .click();
        
         cy
-          .get('.oFCPF')
+          .get('[data-has-error="true"]')
           .should('have.text','You forgot to enter your email!');
     })
 
@@ -127,7 +127,7 @@ describe('login',()=>{
           .click();
        
         cy
-          .get('.oFCPF')
+          .get('[data-has-error="true"]')
           .should('have.text','You forgot to enter your password!');
     })
 
@@ -141,7 +141,7 @@ describe('login',()=>{
           .click();
        
         cy
-          .get('.oFCPF')
+          .get('[data-has-error="true"]')
           .should('have.text','You forgot to enter your password!');
     })
 
@@ -159,7 +159,7 @@ describe('login',()=>{
           .click();
        
         cy
-          .get('.oFCPF')
+          .get('[data-has-error="true"]')
           .should('have.text','Your email or password were incorrect.');
     })
 
@@ -177,7 +177,7 @@ describe('login',()=>{
           .click();
        
         cy
-          .get('.oFCPF')
+          .get('[data-has-error="true"]')
           .should('have.text','Your email or password were incorrect.');
     })
 
@@ -195,7 +195,7 @@ describe('login',()=>{
           .click();
        
         cy
-          .get('.oFCPF')
+          .get('[data-has-error="true"]')
           .should('have.text','Your email or password were incorrect.');
     })
     

@@ -119,7 +119,7 @@ cypress/fixtures/userLoginData.json
 
 
 #cypress reports and videos
-cypress/reports
+
 cypress/videos
 final reports/videoes
 cypress/screenshots
