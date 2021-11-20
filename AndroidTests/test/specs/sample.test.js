@@ -9,7 +9,7 @@ const Dashboard = require("../pageobjects/Dashboard.page.js")
 const LoginPOM = require ("../pageobjects/login.page.js");
 
 
-describe('sample', ()=>{
+describe('ًWelcome Page', ()=>{
     it('app loads correctly', ()=>{
 
     })
