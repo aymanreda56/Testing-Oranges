@@ -17,6 +17,7 @@
     "@wdio/local-runner": "^7.16.8",
     "@wdio/mocha-framework": "^7.16.6",
     "@wdio/selenium-standalone-service": "^7.16.6",
-    "@wdio/spec-reporter": "^7.16.4"
+    "@wdio/spec-reporter": "^7.16.4",
+    "chai": "^4.3.4"
   }
 }
