@@ -7,6 +7,7 @@ const Dashboard = require("../pageobjects/Dashboard.page.js")
 
 
 const LoginPOM = require ("../pageobjects/login.page.js");
+const welcomePage = require("../pageobjects/welcome.page.js")
 
 
 describe('ًWelcome Page', ()=>{
@@ -71,14 +72,19 @@ describe('ًWelcome Page', ()=>{
 })
 
 
-describe('Dashboard tests', ()=>{
+describe.only('Dashboard tests', ()=>{
 
 
-    it('small tab buttons on the bottom works', ()=>{
+    it.only('small tab buttons on the bottom works', ()=>{
 
         ///////////////// MUST LOG IN FIRST /////////
-
-
+        welcomePage.logInBtn.click();
+        welcomePage.logInWithEmailBtn.click();
+        welcomePage.logInEmailField.addvalue('naynoona111@yahoo.com');
+        welcomePage.logInContinueBtn.click();
+        welcomePage.continueWithPasswordBtn.click();
+        welcomePage.logInPasswordField.addvalue('Ayman_mohamed56');
+        welcomePage.finalLogInBtn.click();
         /////////////////////////////////////////////
         driver.touchAction([
             {action: 'press', x:900, y: 1200},
