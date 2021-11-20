@@ -58,7 +58,7 @@ exports.config = {
         // 5 instances get started at a time.
         platformName: 'Android',
         'appium:deviceName': 'Pixel 2 API 30',
-        'appium:app': 'C:/Users/swak/OneDrive/Desktop/SE PROJECT/Testing-Oranges/AndroidTests/ApiDemos-debug.apk',
+        'appium:app': 'C:/Users/swak/OneDrive/Desktop/SE PROJECT/Testing-Oranges/AndroidTests/tumblr-22-3-0-00.apk',
         //
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -97,6 +97,7 @@ exports.config = {
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
     baseUrl: 'http://localhost',
+    appium: { command: 'appium' },
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
