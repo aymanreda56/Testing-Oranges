@@ -5,12 +5,15 @@
 describe('Welcome Page text assertions', () =>{
 
     beforeEach('visit tumblr', () => {
+
         cy.visit('http://tumblr4u.eastus.cloudapp.azure.com/');
+
     })
 
 
     
     it('1st panel texts test', () => {
+
 
 
 
@@ -55,12 +58,15 @@ describe('Welcome Page text assertions', () =>{
             .get('.Heading .bv-example-row.container .row .privacy')
             .contains('Privacy')
             .click();
+
         
         cy.visit('http://tumblr4u.eastus.cloudapp.azure.com/');
+
 
        
 
             //TODO  buttons should be tested by click()
+
     })
 
     it('1st panel texts test (still not finished)', () => {
@@ -88,6 +94,7 @@ describe('Welcome Page text assertions', () =>{
 
     it('2nd panel text test', () => {
         cy
+
             .get('.hello .hello .container-fluid')
             .contains('What is Tumblr?')
             .should('exist');
@@ -97,6 +104,7 @@ describe('Welcome Page text assertions', () =>{
             .get('.hello .hello .container-fluid')
             .contains('What is Tumblr?')
             .click();
+
 
 
         cy
@@ -182,9 +190,11 @@ describe('Welcome Page text assertions', () =>{
 
         
 
+
         //cy.get('section[id ="Get started"]').contains('Sign up').click();
         //cy.url().should('include', '/register');
         //cy.go('back');
+
 
 
 
@@ -242,6 +252,7 @@ describe('Welcome Page text assertions', () =>{
 
         cy.url().should('include', '/privacy');
         cy.go('back');
+
         //privacy
         //policy
 

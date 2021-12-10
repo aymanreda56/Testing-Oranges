@@ -38,11 +38,17 @@ describe('login',()=>{
     it('when reload the page the background changes',()=>{
 
       cy
+        .wait(4000);
+
+      cy
         .get('[loading="lazy"]')
         .invoke('attr', 'srcset')
         .then((prevBackground)=>{
           cy
             .reload();
+
+          cy
+            .wait(4000);
           cy
             .get('[loading="lazy"]')
             .invoke('attr', 'srcset')
@@ -81,7 +87,7 @@ describe('login',()=>{
     it('empty email and empty password',()=>{
         
         cy
-          .get('form > .TRX6J > .EvhBA')
+          .get('[aria-label="Log in"]')
           .click();
        
         cy
@@ -95,7 +101,7 @@ describe('login',()=>{
           .type('asdfghj');
 
         cy
-          .get('form > .TRX6J > .EvhBA')
+          .get('[aria-label="Log in"]')
           .click();
        
         cy
@@ -109,7 +115,7 @@ describe('login',()=>{
           .type('y35SYi:7@+dK7J');
 
         cy
-          .get('form > .TRX6J > .EvhBA')
+          .get('[aria-label="Log in"]')
           .click();
        
         cy
@@ -123,7 +129,7 @@ describe('login',()=>{
           .type('ahmedmad@gmail.com');
 
         cy
-          .get('form > .TRX6J > .EvhBA')
+          .get('[aria-label="Log in"]')
           .click();
        
         cy
@@ -137,7 +143,7 @@ describe('login',()=>{
           .type('itztysocfkegfkgoij@adfskj.com');
 
         cy
-          .get('form > .TRX6J > .EvhBA')
+          .get('[aria-label="Log in"]')
           .click();
        
         cy
@@ -155,7 +161,7 @@ describe('login',()=>{
           .type('asdfghj');
         
         cy
-          .get('form > .TRX6J > .EvhBA')
+          .get('[aria-label="Log in"]')
           .click();
        
         cy
@@ -173,7 +179,7 @@ describe('login',()=>{
           .type('y35SYi:7@+dK7J');
         
         cy
-          .get('form > .TRX6J > .EvhBA')
+          .get('[aria-label="Log in"]')
           .click();
        
         cy
@@ -191,7 +197,7 @@ describe('login',()=>{
           .type('assdfghjkltr');
         
         cy
-          .get('form > .TRX6J > .EvhBA')
+          .get('[aria-label="Log in"]')
           .click();
        
         cy
@@ -209,7 +215,7 @@ describe('login',()=>{
           .type('y35SYi:7@+dK7J');
         
         cy
-          .get('form > .TRX6J > .EvhBA')
+          .get('[aria-label="Log in"]')
           .click();
        
         cy
