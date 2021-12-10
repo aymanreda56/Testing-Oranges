@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-21T10:21:48.389Z",
+    "end": "2021-11-21T10:21:51.900Z",
+    "duration": 3511,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2b71709c-d6fd-47d6-bf2a-b2025c85b0c8",
+      "title": "",
+      "fullFile": "cypress/integration/welcomepageassertion.spec.js",
+      "file": "cypress/integration/welcomepageassertion.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a7ef34f4-895c-445b-a22f-c0cfd412ff6e",
+          "title": "Welcome Page text assertions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1st panel texts test",
+              "fullTitle": "Welcome Page text assertions 1st panel texts test",
+              "timedOut": null,
+              "duration": 1595,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('section[id=\"Get started\"]').contains('Make stuff, look at stuff, talk about stuff, find your people.').should('exist');\ncy.get('section[id=\"Get started\"]').contains('By continuing with the options below, you agree to Tumblr’s Terms of Service and have read the Privacy Policy').should('exist');\ncy.get('section[id=\"Get started\"]').contains(\"Here's what's trending\").should('exist');\ncy.get('section[id=\"Get started\"]').contains('Continue with Google').should('exist');\ncy.get('section[id=\"Get started\"]').contains('Continue with Apple').should('exist');\ncy.get('section[id=\"Get started\"]').contains('Log in').should('exist');\ncy.get('section[id=\"Get started\"]').contains('Sign up').should('exist');\ncy.get('[class=\"Z8Ux2 qjTo7 IMvK3\"]').contains('Log in').should('exist'); // garbage class\ncy.get('[class=\"Z8Ux2 qjTo7 IMvK3\"]').contains('Sign up').should('exist'); // garbage class\ncy.get('footer[role=\"contentinfo\"]').contains('Terms').should('exist');\ncy.get('footer[role=\"contentinfo\"]').contains('Privacy').should('exist');\ncy.get('footer[role=\"contentinfo\"]').contains('Jobs').should('exist');\ncy.get('footer[role=\"contentinfo\"]').contains('Support').should('exist');",
+              "err": {},
+              "uuid": "902a5385-e74f-48e2-bc61-8835f96a21d2",
+              "parentUUID": "a7ef34f4-895c-445b-a22f-c0cfd412ff6e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "902a5385-e74f-48e2-bc61-8835f96a21d2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1595,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "video": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
