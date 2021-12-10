@@ -39,7 +39,7 @@ describe('ًWelcome Page', ()=>{
         
     })
 
-    it.only('text and logo assertions', ()=>{
+    it('text and logo assertions', ()=>{
         driver.setTimeouts(5000)
         let text1 = welcome.paragraph.getAttribute('text');
         console.log(text1);
@@ -55,7 +55,7 @@ describe('ًWelcome Page', ()=>{
 
     
     
-        it('loginButton',()=>{
+        it.only('loginButton',()=>{
             driver.setTimeout(5000);
     
             LoginPOM.loginButton.click();
@@ -107,6 +107,7 @@ describe.only('Dashboard tests', ()=>{
             {action: 'moveTo', x:900, y: 1200},
             'release'
         ]);
+        /// expect must be after touchAction
 
         Dashboard.accountTabBtn.click();
 
