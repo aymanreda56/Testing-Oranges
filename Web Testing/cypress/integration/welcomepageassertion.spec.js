@@ -178,7 +178,7 @@ describe('Welcome Page text assertions', () =>{
 
 
 
-    it.only('1st panel links tests', () => {
+    it('1st panel links tests', () => {
 
         cy.get('.hello .Heading')
         .contains('Tumblr4U')

@@ -5,9 +5,13 @@ describe('login',()=>{
     let postedbyName;
     beforeEach(()=>{
         cy
-          .visit('https://www.tumblr.com/login');
+          .visit('http://tumblr4u.eastus.cloudapp.azure.com/');
+        cy
+          .get(':nth-child(4) > a > .btn')
+          .click();
     })
-    it('posted by link',()=>{
+
+    /*it('posted by link',()=>{
       
       cy
         .get('.AohpR > :nth-child(1) > a > strong')
@@ -22,20 +26,19 @@ describe('login',()=>{
             .url()
             .should('include',`/${postedbyName}.tumblr.com`);
       });
-      
+    })*/
 
-    })
     it('signup button',()=>{
       cy
-        .get('a[href="/register?source=login_register_header_landing"]')
+        .get('[href="/signUp"] > .btn')
         .click();
       cy
         .url()
-        .should('include','/register');
+        .should('include','/signUp');
 
     })
 
-    it('when reload the page the background changes',()=>{
+    /*it('when reload the page the background changes',()=>{
 
       cy
         .wait(4000);
@@ -58,172 +61,190 @@ describe('login',()=>{
             });
 
         });
- 
-    })
+     })*/
 
     
 
     it('when click on tumblr it goes to tumblr welcome page',()=>{
       
       cy
-        .get('[aria-label="Tumblr"]')
+        .get('#app .root .Main')
+        .contains('Tumblr4U')
         .click();
       cy
         .url()
-        .should('include', '/');
+        .should('equal', 'http://tumblr4u.eastus.cloudapp.azure.com/');
     })
 
     it('when click on tumblr icon it goes to tumblr welcome page',()=>{
       
       cy
-        .get('svg[viewBox="0 0 21 36.8"]')
+        .get('#TheHeader .navbar-brand')
+        .contains('T4U')
         .click();
       cy
         .url()
-        .should('include', '/');
+        .should('equal', 'http://tumblr4u.eastus.cloudapp.azure.com/');
     })
     
 
     it('empty email and empty password',()=>{
         
         cy
-          .get('[aria-label="Log in"]')
+          .get('form > .btn')
           .click();
        
         cy
-          .get('[data-has-error="true"]')
+          .get('.error')
           .should('have.text','You do have to fill this stuff out, you know.');
     })
 
     it('empty email and incorrect password',()=>{
         cy
-          .get('[name="password"]')
+          .get('#exampleInputPassword1')
           .type('asdfghj');
 
         cy
-          .get('[aria-label="Log in"]')
+          .get('form > .btn')
           .click();
        
         cy
-          .get('[data-has-error="true"]')
+          .get('.error')
           .should('have.text','You forgot to enter your email!');
     })
 
+    it('email and short password',()=>{
+      cy
+          .get('#exampleInputEmail1')
+          .type('ahmedmad@gmail.com');
+      cy
+        .get('#exampleInputPassword1')
+        .type('asdrf');
+
+      cy
+        .get('form > .btn')
+        .click();
+     
+      cy
+        .get('.error')
+        .should('have.text','You forgot to enter your email!');
+  })
+
     it('empty email and correct password',()=>{
         cy
-          .get('[name=password]')
-          .type('y35SYi:7@+dK7J');
+          .get('#exampleInputPassword1')
+          .type('emademad');
 
         cy
-          .get('[aria-label="Log in"]')
+          .get('form > .btn')
           .click();
        
         cy
-          .get('[data-has-error="true"]')
+          .get('.error')
           .should('have.text','You forgot to enter your email!');
     })
 
     it('non existing email and empty password',()=>{
         cy
-          .get('[name=email]')
+          .get('#exampleInputEmail1')
           .type('ahmedmad@gmail.com');
 
         cy
-          .get('[aria-label="Log in"]')
+          .get('form > .btn')
           .click();
        
         cy
-          .get('[data-has-error="true"]')
+          .get('.error')
           .should('have.text','You forgot to enter your password!');
     })
 
     it('existing email and empty password',()=>{
         cy
-          .get('[name=email]')
-          .type('itztysocfkegfkgoij@adfskj.com');
+          .get('#exampleInputEmail1')
+          .type('ahmedspiderman7@gmail.com');
 
         cy
-          .get('[aria-label="Log in"]')
+          .get('form > .btn')
           .click();
        
         cy
-          .get('[data-has-error="true"]')
+          .get('.error')
           .should('have.text','You forgot to enter your password!');
     })
 
     it('non existing email and incorrect password',()=>{
         cy
-          .get('[name=email]')
+          .get('#exampleInputEmail1')
           .type('ahmedemad@gmail.com');
 
         cy
-          .get('[name=password]')
+          .get('#exampleInputPassword1')
           .type('asdfghj');
         
         cy
-          .get('[aria-label="Log in"]')
+          .get('form > .btn')
           .click();
        
         cy
-          .get('[data-has-error="true"]')
+          .get('.error')
           .should('have.text','Your email or password were incorrect.');
     })
 
     it('non existing email and correct password',()=>{
         cy
-          .get('[name=email]')
+          .get('#exampleInputEmail1')
           .type('ahmedmad@gmail.com');
 
         cy
-          .get('[name=password]')
-          .type('y35SYi:7@+dK7J');
+          .get('#exampleInputPassword1')
+          .type('emademad');
         
         cy
-          .get('[aria-label="Log in"]')
+          .get('form > .btn')
           .click();
        
         cy
-          .get('[data-has-error="true"]')
+          .get('.error')
           .should('have.text','Your email or password were incorrect.');
     })
 
     it('existing email and incorrect password',()=>{
         cy
-          .get('[name=email]')
-          .type('itztysocfkegfkgoij@adfskj.com');
+          .get('#exampleInputEmail1')
+          .type('ahmedspiderman7@gmail.com');
 
         cy
-          .get('[name=password]')
+          .get('#exampleInputPassword1')
           .type('assdfghjkltr');
         
         cy
-          .get('[aria-label="Log in"]')
+          .get('form > .btn')
           .click();
        
         cy
-          .get('[data-has-error="true"]')
+          .get('.error')
           .should('have.text','Your email or password were incorrect.');
     })
     
     it('existing email and correct password',()=>{
         cy
-          .get('[name=email]')
-          .type('itztysocfkegfkgoij@adfskj.com');
+          .get('#exampleInputEmail1')
+          .type('ahmedspiderman7@gmail.com');
 
         cy
-          .get('[name=password]')
-          .type('y35SYi:7@+dK7J');
+          .get('#exampleInputPassword1')
+          .type('emademad');
         
         cy
-          .get('[aria-label="Log in"]')
+          .get('form > .btn')
           .click();
        
         cy
           .url()
-          .should('include', 'dashboard');
+          .should('include', 'home');
     })
 
-    it('testing search bar in login page with enter button',()=>{
+    /*it('testing search bar in login page with enter button',()=>{
 
       cy
         .get('input[aria-label="Search"]')
@@ -234,7 +255,7 @@ describe('login',()=>{
       cy
         .contains('google')
         .should('exist');
-    })
+    })*/
 
     
 })
