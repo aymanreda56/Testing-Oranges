@@ -4,8 +4,7 @@ describe('Home page tests',()=>{
     const homeOBJ = new HomePage();
 
     beforeEach(()=>{
-        homeOBJ.navigate();
-      
+       homeOBJ.navigate();
     })
 
     it('TEST', () => {
