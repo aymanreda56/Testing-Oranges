@@ -1,5 +1,10 @@
 export class HomePage{
     navigate(){
+      cy
+        .visit('https://www.tumblr.com/dashboard');
+      
+      cy.fixture('PersonalData').then((user)=>{
+        let token = user.token;
         cy
           .visit('https://www.tumblr.com/login');
         cy
@@ -18,16 +23,13 @@ export class HomePage{
         cy.wait(2000);
        /* cy
           .visit('https://www.tumblr.com/dashboard');*/
+          cy.setCookie('sid',`${token}`);
+      })  
     }
 
     tumblriconValidation(){
-      /*cy
-        .wait('@logIn')
-        .its('response.statusCode')
-        .should('eq',200);*/
-      
       cy
-        .get('a[aria-label="home"]')
+        .get('.QOMh2 > a > div > svg')
         .click();
       cy
         .url()
