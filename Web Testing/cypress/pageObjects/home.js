@@ -5,6 +5,7 @@ export class HomePage{
       
       cy.fixture('PersonalData').then((user)=>{
         let token = user.token;
+        cy.setCookie('sid',`${token}`);
         cy
           .visit('https://www.tumblr.com/login');
         cy
@@ -23,7 +24,7 @@ export class HomePage{
         cy.wait(2000);
        /* cy
           .visit('https://www.tumblr.com/dashboard');*/
-          cy.setCookie('sid',`${token}`);
+          
       })  
     }
 
