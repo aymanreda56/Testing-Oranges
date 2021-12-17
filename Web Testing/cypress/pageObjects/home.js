@@ -15,6 +15,7 @@ export class HomePage{
           .type('Tumblr4me_12');
         cy.wait(2000);
         cy.get('[aria-label="Log in"]').click();
+        cy.wait(2000);
        /* cy
           .visit('https://www.tumblr.com/dashboard');*/
     }
