@@ -3,6 +3,9 @@
 
     "email" : "naynoona111@yahoo.com",
     "password" : "Ayman_mohamed56",
+    "blogName" : "naynoona",
+    "followedBlogs" : ["hangtightwmarcie", "prinnay", "kkokeiko", "ancientsstudies", "lascivious-machinations", "killua21", "metamorphesque",
+         "ousia-poetica", "staff"],
     "followedTags" : ["#football", "#nutrition", "#health & fitness", "#sports"],
     "keyword" : []
     },
@@ -10,6 +13,8 @@
     {
     "email" : "ahmedspiderman7@gmail.com",
     "password" : "Tumblr4me_12",
+    "blogName" : "killua21",
+    "followedBlogs" : ["naynoona", "staff"],
     "followedTags" : [],
     "keyword" : []
     }]

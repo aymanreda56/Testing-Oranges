@@ -152,6 +152,17 @@ describe('search after logging in', ()=>{
         .should('include', '/explore/recommended-for-you');
     })
 
+    it('tags you follow dropping from search bar', ()=>{
+
+        cy.get('[aria-label = "Search"]')
+        .click();
+
+        cy.get('.jV8QC')
+        .contains('/tagged/football');
+
+        cy.fixture('user').then()
+    })
+
 
 
 
