@@ -16,6 +16,7 @@ export class HomePage{
             method:'GET',
             url:'/dashboard'
           }).as('logIn');*/
+          
         cy
           .get('[aria-label="password"]')
           .type('Tumblr4me_12');
