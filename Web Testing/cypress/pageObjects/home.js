@@ -1,16 +1,14 @@
 export class HomePage{
     navigate(){
       cy
-        .visit('https://www.tumblr.com/dashboard');
+        .visit('http://tumblr4u.eastus.cloudapp.azure.com/');
       
-      cy.fixture('PersonalData').then((user)=>{
-        let token = user.token;
-        cy.setCookie('sid',`${token}`);
+        cy.contains('Log in').click();
+      
+        cy.fixture('user').then((user)=>{
         cy
-          .visit('https://www.tumblr.com/login');
-        cy
-          .get('[aria-label="email"]')
-          .type('ahmedspiderman7@gmail.com');
+          .get('#exampleInputEmail1')
+          .type(user.users[2].email);
         /*cy
           .intercept({
             method:'GET',
@@ -18,11 +16,14 @@ export class HomePage{
           }).as('logIn');*/
           
         cy
-          .get('[aria-label="password"]')
-          .type('Tumblr4me_12');
+          .get('#exampleInputPassword1')
+          .type(user.users[2].password);
         cy.wait(2000);
-        cy.get('[aria-label="Log in"]').click();
+        cy.get('button[type="submit"]').click();
         cy.wait(2000);
+        
+          let token = user.users[2].token;
+          window.localStorage.setItem('token',`${token}`);
        /* cy
           .visit('https://www.tumblr.com/dashboard');*/
           
