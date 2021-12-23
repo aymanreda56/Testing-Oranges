@@ -58,7 +58,7 @@ exports.config = {
         // 5 instances get started at a time.
         platformName: 'Android',
         'appium:deviceName': 'Pixel 4 API 28',
-        'appium:app': 'C:/Users/swak/OneDrive/Desktop/SE_PROJECT/Testing-Oranges/AndroidTests/tumblr-22-3-0-00.apk',
+        'appium:app': 'C:/Users/swak/OneDrive/Desktop/SE_PROJECT/Testing-Oranges/AndroidTests/app-debug.apk',
         //
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.

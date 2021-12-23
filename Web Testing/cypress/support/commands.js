@@ -25,12 +25,12 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
-cypress.commands.add('Searchfor', { prevSubject: 'optional'}, (keyword)=>{
+Cypress.Commands.add('Searchfor', { prevSubject: 'optional'}, (keyword)=>{
     cy.get('[aria-label="Search"]').click();
     cy.get('[aria-label="Search"]').type(keyword);
 })
 
-cypress.commands.add('login', { prevSubject: 'optional'}, (user)=>{
+Cypress.Commands.add('login', { prevSubject: 'optional'}, (user)=>{
     cy
     .get('[aria-label="email"]')
 
@@ -41,7 +41,7 @@ cypress.commands.add('login', { prevSubject: 'optional'}, (user)=>{
     cy.get('[aria-label="Log in"]').click();
 })
 
-cypress.commands.add('logout', { prevSubject: 'optional'}, ()=>{
+Cypress.Commands.add('logout', { prevSubject: 'optional'}, ()=>{
     cy.get('[aria-label="Account"]').click();
     cy.get('[aria-label="Log out"]').click();
     cy.get('[aria-label="OK"]').click();
