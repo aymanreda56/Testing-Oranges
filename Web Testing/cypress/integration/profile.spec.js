@@ -1,10 +1,12 @@
 /// <reference types ="cypress" />
 
-import { times } from "cypress/types/lodash";
+
 import { HomePage } from "../pageObjects/home.js"
 
 
 describe('log out button', ()=>{
+    const homeOBJ = new HomePage();
+
     beforeEach('log in', ()=>{
         homeOBJ.navigate();
     });
@@ -29,6 +31,8 @@ describe('log out button', ()=>{
 });
 
 describe('palette colours', ()=>{
+    const homeOBJ = new HomePage();
+
     beforeEach('log in', ()=>{
         homeOBJ.navigate();
     });
@@ -38,7 +42,7 @@ describe('palette colours', ()=>{
         cy.get('[aria-label="Change Palette"]').click();
     });
 
-    it('changing palette mutiple times', ()=>{
+    it.only('changing palette mutiple times', ()=>{
         cy.get('[aria-label="Account"]').click();
         for(var i = 0 ; i < 12 ; i++)
         {
@@ -150,10 +154,10 @@ describe('keyboard shortcuts', ()=>{
         })
         
     });
-    //NOTE : SHOULD LIKE A POST, THEN CHECK FOR IT IN THE LIKES PAGE
+    //NOTE : SHOULD LIKE A POST, THEN CHECK FOR IT IN THE LIKES PAGE ///////////////////////////////////////////////////////////////////////////////////////////////////////
 });
 
-
+// NOTE : NOT FINISHED YET ///////////////////////////////////////////////////////////////////////////////////////////////////////
 describe('multiple blogs', ()=>{
     beforeEach('log in', ()=>{
         homeOBJ.navigate();
@@ -161,7 +165,14 @@ describe('multiple blogs', ()=>{
 
     it('first blog', ()=>{
         cy.get('[aria-label="Account"]').click();
-        cy.
-    })
-    noQqZ
-})
+    //    cy.
+    });
+   // noQqZ
+});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
