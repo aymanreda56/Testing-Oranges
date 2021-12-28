@@ -8,7 +8,7 @@
          "ousia-poetica", "staff"],
     "followedTags" : ["football", "nutrition", "health & fitness", "sports"],
     "keyword" : [],
-    "token":"aH8t5qJQi2uP1ACQeMLt686t28odqDbJqFQBzNcNOzUUe2HAPq"
+    "token":"aRg9s98FxoZp8eBjAuXQny50UGEA2ySKORQ9r7TTvibQ99wHve.anIL3GSCrsIubxeRvLCMJSv1G4OAHNgJUlgRjREsFHK6vMhp62"
     }
     ,
 
@@ -19,7 +19,7 @@
     "followedBlogs" : ["naynoona", "staff"],
     "followedTags" : ["sport", "arcane"],
     "keyword" : ["arcane"],
-    "token":"aH8t5qJQi2uP1ACQeMLt686t28odqDbJqFQBzNcNOzUUe2HAPq"
+    "token":"aOU900eqTI5GU5K9KPpThj3vCSEWUmzK07QfvKZUHMFhlzGO4p.aECInpH6QLMzyI9fdJJPGWUV9uFnAksnSsknGuBaH3txEmBNYA"
     },
 
     {
@@ -34,7 +34,19 @@
     {
         "email" : "reem.atala555@gmail.com",
         "password" : "1234",
-        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJlZW0uYXRhbGE1NTVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2NDA1MjU3Nzl9.78aiW2iajgpPCFLfZFypW2VcKwFvnWB6vgbHM1p6Snw"
+        "blogName" : "marim22",
+        "followedBlogs" : ["reem"],
+        "keyword" : ["industry", "arts"],
+        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJlZW0uYXRhbGE1NTVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2NDA2Nzk4MDd9.iec2rio6qGZxrrtStGmg6md515Uwz96Z6MEQwQn46uo"
+    },
+    {
+        "email" : "nourtx73@gmail.com",
+        "password" : "1234",
+        "blogName" : "rawaa2000",
+        "followedBlogs" : ["61c9e2100ea834c610490b64"],
+        "keyword" : ["cmp","industry", "arts"],
+        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhYWllLjE0MjAwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjQwNjkwOTM4fQ.ivWszND-P4WCDiMrzWQLT6LwcJZ7u6W0o256laxlQl8"
+
     }]
 
 

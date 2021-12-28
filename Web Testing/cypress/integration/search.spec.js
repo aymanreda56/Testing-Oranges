@@ -5,37 +5,40 @@ import { HomePage } from "../pageObjects/home.js"
 
 describe('search tests before login', () =>{
 
+    
     beforeEach('visit tumblr', () => {
 
-        cy.visit('http://tumblr4u.eastus.cloudapp.azure.com/');
+        //cy.wait(40000, 'timeout');
+        cy.visit('https://www.tumblr.com/', { timeout: 40000 });
+
 
     })
 
     it('drop down menu interactions', ()=>{
 
-        // cy
-        // .get('input[name="q"]')
-        // .click();
-
-        // cy
-        // .get('[aria-label = "Search"]')
-        // .type('lol');
-        
-        // cy.get('.h1rLz').click();
-
-        // cy.not.contains('lol');
-
         cy
-        .get('[placeholder="Search"]')
+        .get('input[name="q"]')
         .click();
 
         cy
-        .get('[placeholder="Search"]')
+        .get('[aria-label = "Search"]')
         .type('lol');
         
-        cy.get('.Main').contains('Tumblr4U').click();
+        cy.get('body').click(0,0);
 
-        cy.not.contains('lol');
+        cy.contains('lol').should('not.exist');
+
+        // cy
+        // .get('[placeholder="Search"]')
+        // .click();
+
+        // cy
+        // .get('[placeholder="Search"]')
+        // .type('lol');
+        
+        // cy.get('body').click(0,0);
+
+        // cy.contains('lol').should('not.exist');
     })
 
     it('selecting a search element', ()=>{
@@ -69,33 +72,53 @@ describe('search tests before login', () =>{
         // cy.go('back');
 
 
+        cy.fixture('user').then((user)=>{
+
         cy
-        .get('[placeholder="Search"]')
+        .get('[name="q"]')
         .click();
 
         cy
-        .get('[placeholder="Search"]')
-        .type('lol');
+        .get('[name="q"]')
+        .type(user.users[3].keyword[0]);
 
-        cy.get('[href="/tagged/lol"]').click();
+        
 
-        cy.url().should('include', '/tagged/lol');
+        var link = '/tagged/';
+
+        cy.get('.buDz_ .a8XCP:first').click();
+        
+        link = link.concat(user.users[3].keyword[0]);
+        
+
+        cy.url().should('include', link);
 
         cy.go('back');
 
+
+
+
+
+
+
         cy
-        .get('[placeholder="Search"]')
+        .get('[name="q"]')
         .click();
 
         cy
-        .get('[placeholder="Search"]')
-        .type('lol');
+        .get('[name="q"]')
+        .type(user.users[3].keyword[0]);
 
-        cy.get('[href="/search/lol"]').click();
+        cy.get('.buDz_:first:first').click();
 
-        cy.url().should('include', '/search/lol');
+        link = '/search/';
+        link = link.concat(user.users[3].keyword[0]);
+        cy.url().should('include', link);
 
         cy.go('back');
+        })
+
+        
     })
 
     it('pressing enter without entering search keyword', ()=>{

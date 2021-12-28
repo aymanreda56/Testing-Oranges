@@ -1,10 +1,12 @@
 /// <reference types ="cypress" />
 
-import { times } from "cypress/types/lodash";
+
 import { HomePage } from "../pageObjects/home.js"
 
 
 describe('log out button', ()=>{
+    const homeOBJ = new HomePage();
+
     beforeEach('log in', ()=>{
         homeOBJ.navigate();
     });
@@ -152,10 +154,10 @@ describe('keyboard shortcuts', ()=>{
         })
         
     });
-    //NOTE : SHOULD LIKE A POST, THEN CHECK FOR IT IN THE LIKES PAGE
+    //NOTE : SHOULD LIKE A POST, THEN CHECK FOR IT IN THE LIKES PAGE ///////////////////////////////////////////////////////////////////////////////////////////////////////
 });
 
-
+// NOTE : NOT FINISHED YET ///////////////////////////////////////////////////////////////////////////////////////////////////////
 describe('multiple blogs', ()=>{
     beforeEach('log in', ()=>{
         homeOBJ.navigate();
@@ -167,4 +169,10 @@ describe('multiple blogs', ()=>{
     });
    // noQqZ
 });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
 

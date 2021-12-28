@@ -7,8 +7,8 @@ export class HomePage{
       
         cy.fixture('user').then((user)=>{
         cy
-          .get('#exampleInputEmail1')
-          .type(user.users[3].email);
+          .get('[placeholder="Email"]')
+          .type(user.users[4].email);
         /*cy
           .intercept({
             method:'GET',
@@ -16,14 +16,15 @@ export class HomePage{
           }).as('logIn');*/
           
         cy
-          .get('#exampleInputPassword1')
-          .type(user.users[3].password);
+          .get('[placeholder="Password"]')
+          .type(user.users[4].password);
         cy.wait(2000);
-        cy.get('button[type="submit"]').click();
+        cy.get('[type="submit"]').click();
         cy.wait(2000);
         
-          let token = user.users[3].token;
+          let token = user.users[4].token;
           window.localStorage.setItem('token',`${token}`);
+          //cy.setCookie('sid',`${token}`)
        /* cy
           .visit('https://www.tumblr.com/dashboard');*/
           
