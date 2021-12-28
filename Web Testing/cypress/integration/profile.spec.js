@@ -29,6 +29,8 @@ describe('log out button', ()=>{
 });
 
 describe('palette colours', ()=>{
+    const homeOBJ = new HomePage();
+
     beforeEach('log in', ()=>{
         homeOBJ.navigate();
     });
@@ -38,7 +40,7 @@ describe('palette colours', ()=>{
         cy.get('[aria-label="Change Palette"]').click();
     });
 
-    it('changing palette mutiple times', ()=>{
+    it.only('changing palette mutiple times', ()=>{
         cy.get('[aria-label="Account"]').click();
         for(var i = 0 ; i < 12 ; i++)
         {
@@ -161,7 +163,8 @@ describe('multiple blogs', ()=>{
 
     it('first blog', ()=>{
         cy.get('[aria-label="Account"]').click();
-        cy.
-    })
-    noQqZ
-})
+    //    cy.
+    });
+   // noQqZ
+});
+
