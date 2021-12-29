@@ -4,7 +4,7 @@
 import { HomePage } from "../pageObjects/home.js"
 //const { contains } = require("cypress/types/jquery");
 
-
+/*
 
 describe('block a user', ()=>{
     const homeOBJ = new HomePage();
@@ -95,3 +95,8 @@ describe('blocking a user then trying to reach him', ()=>{
 
 
 })
+
+
+
+
+*/
