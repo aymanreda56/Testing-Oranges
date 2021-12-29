@@ -17,7 +17,7 @@ describe('ًlogin tests', ()=>{
         logInBtn.click();
         logInEmail.click();
         await emailField.addValue("");
-        await passwordField.addValue("");
+        await passwordField.addValue(""); 
         expect(loginbtn).toBe("false"); 
     })
 
