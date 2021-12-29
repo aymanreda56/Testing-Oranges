@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-12-28T13:52:06.126Z",
+    "end": "2021-12-28T13:53:08.919Z",
+    "duration": 62793,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c80617b1-3e91-41fc-a96a-7f5eac239cd2",
+      "title": "",
+      "fullFile": "cypress/integration/signup.spec.js",
+      "file": "cypress/integration/signup.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "16c38bc3-0465-4488-8b5c-119520e198a2",
+          "title": "signup",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "non existing email and correct password and existing blog name",
+              "fullTitle": "signup non existing email and correct password and existing blog name",
+              "timedOut": null,
+              "duration": 59978,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.mailslurp().then(mailslurp => mailslurp.createInbox()).then(inbox => {\n  // save inbox id and email address to this (make sure you use function and not arrow syntax)\n  cy.wrap(inbox.id).as('inboxId');\n  cy.wrap(inbox.emailAddress).as('emailAddress');\n  cy.get('#inputemail').type(inbox.emailAddress);\n  cy.get('#pass').type('y35SYi:7@+dK7J');\n  cy.get('#blog').type('emademad');\n  cy.get('form > .btn').click();\n  cy.get('.error').should('have.text', \"That's a good blog name, but it's taken.\");\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 30050ms: `cy.click()` failed because this element:\n\n`<button data-v-a4c96c44=\"\" type=\"button\" class=\"btn buttonTop btn-info btn-lg btn-block\">Sign up</button>`\n\nis being covered by another element:\n\n`<div data-v-08017c12=\"\" id=\"nav-collapse\" class=\"navbar-collapse collapse\" style=\"display: none;\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `signup`",
+                "estack": "CypressError: Timed out retrying after 30050ms: `cy.click()` failed because this element:\n\n`<button data-v-a4c96c44=\"\" type=\"button\" class=\"btn buttonTop btn-info btn-lg btn-block\">Sign up</button>`\n\nis being covered by another element:\n\n`<div data-v-08017c12=\"\" id=\"nav-collapse\" class=\"navbar-collapse collapse\" style=\"display: none;\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `signup`\n    at $Cy.ensureDescendents (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:162943:78)\n    at ensureDescendents (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:149686:8)\n    at ensureDescendentsAndScroll (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:149693:14)\n    at ensureElIsNotCovered (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:149827:5)\n    at runAllChecks (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:150017:52)\n    at retryActionability (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:150041:16)\n    at tryCatcher (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:13196:23)\n    at Function.Promise.attempt.Promise.try (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:10470:29)\n    at whenStable (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:167668:63)\n    at http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:167165:14\n    at tryCatcher (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:11313:18)\n    at Promise._fulfill (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:11257:18)\nFrom Your Spec Code:\n    at Context.eval (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/tests?p=cypress\\integration\\signup.spec.js:105:108)",
+                "diff": null
+              },
+              "uuid": "b147e9cf-ee4d-4ad5-82f1-a546958114d6",
+              "parentUUID": "16c38bc3-0465-4488-8b5c-119520e198a2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b147e9cf-ee4d-4ad5-82f1-a546958114d6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 59978,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "video": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
