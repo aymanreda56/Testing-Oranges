@@ -47,7 +47,7 @@ class LoginPage  {
     async passwordTextBox(){
         const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/login_with_email_password_field")';
 
-        const POM = (await $(`android=${selector}`));
+        const POM = (await $(`android=${selector}`)); 
 
         await POM.waitForDisplayed({
             timeout: 300000

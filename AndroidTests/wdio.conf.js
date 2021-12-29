@@ -61,7 +61,7 @@ exports.config = {
         'appium:udid': "emulator-5554",
         'appium:deviceName': 'Pixel 4 API 28',
         'appium:app': 'F:/Software Engineering/Testing-Oranges/AndroidTests/app-debug.apk',
-        "appium:automationName": "UiAutomator2"
+        "appium:automationName": "UiAutomator2" 
         //
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.

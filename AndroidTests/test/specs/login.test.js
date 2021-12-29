@@ -8,7 +8,7 @@ const LoginPOM = require ("../pageobjects/login.page.js");
 
 describe('ًlogin tests', ()=>{
    /* const logInBtn = await LoginPOM.loginButton();
-    const logInEmail = await LoginPOM.loginWithEmailButton();
+    const logInEmail = await LoginPOM.loginWithEmailButton(); 
     const emailField = await LoginPOM.emailTextBox();
     const passwordField = await LoginPOM.passwordTextBox();
     const loginbtn = await LoginPOM.continueButton().getAttribute("enabled");*/
