@@ -13,7 +13,7 @@ class LoginPage  {
     }
     
     get continueButton(){
-        return $('~primary_button');
+        return $('~primary_button'); 
     }
 
     get clearButton(){

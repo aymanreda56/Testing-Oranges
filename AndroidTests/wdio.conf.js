@@ -57,7 +57,7 @@ exports.config = {
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
         platformName: 'Android',
-        'appium:deviceName': 'Pixel 4 API 28',
+        'appium:deviceName': 'Pixel 4 API 28', 
         'appium:app': 'C:/Users/swak/OneDrive/Desktop/SE_PROJECT/Testing-Oranges/AndroidTests/tumblr-22-3-0-00.apk',
         //
         // If outputDir is provided WebdriverIO can capture driver session logs
