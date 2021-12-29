@@ -1,38 +1,60 @@
 class LoginPage  {
     
-    get loginButton() {
-        return $('com.tumblr:id/login_button');
+    async loginButton() {
+        const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/login_button")';
+
+        const POM = (await $(`android=${selector}`));
+
+        await POM.waitForDisplayed({
+            timeout: 300000
+        });
+        return POM
     }
 
-    get loginWithEmailButton() {
-        return $('com.tumblr:id/email_auth_button');
+    async loginWithEmailButton() {
+        const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/login_with_email_button")';
+
+        const POM = (await $(`android=${selector}`));
+
+        await POM.waitForDisplayed({
+            timeout: 300000
+        });
+        return POM
     }
 
-    get emailTextBox() {
-        return $('com.tumblr:id/email');
+    async emailTextBox() {
+        const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/login_with_email_email_field")';
+
+        const POM = (await $(`android=${selector}`));
+
+        await POM.waitForDisplayed({
+            timeout: 300000
+        });
+        return POM
     }
     
-    get continueButton(){
-        return $('~primary_button');
+    async continueButton(){
+        const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/login_with_email_login_button")';
+
+        const POM = (await $(`android=${selector}`));
+
+        await POM.waitForDisplayed({
+            timeout: 300000
+        });
+        return POM
     }
 
-    get clearButton(){
-        return $('~clear_button');
+    async passwordTextBox(){
+        const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/login_with_email_password_field")';
+
+        const POM = (await $(`android=${selector}`)); 
+
+        await POM.waitForDisplayed({
+            timeout: 300000
+        });
+        return POM
     }
 
-    get enterPassword(){
-        return $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.TextView');
-    }
-
-    get passwordTextBox(){
-        return $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[2]');
-    }
-
-    get loginLastStep(){
-        return $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.Button');
-    }
-
-    
     /*async login (username, password) {
         await this.emailTextBox.setValue(username);
         await this.inputPassword.setValue(password);
