@@ -21,7 +21,9 @@ pipeline
         stage('build Docker image'){
             steps{
                 script{
-                    dockerImage= docker.build registery
+                        dir('./Web_Testing'){
+                            dockerImage= docker.build registery
+                    }
                 }
             }
         }
@@ -37,12 +39,5 @@ pipeline
         }
     }
     
-post {
-    failure {
-        mail to: 'mina.labib00@eng-st.cu.edu.eg ,mohamed.ahmedmoreb@gmail.com',
-             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-             body: "Something is wrong with ${env.BUILD_URL}"
-            }
-    }
 }
 
