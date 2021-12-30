@@ -21,7 +21,9 @@ pipeline
         stage('build Docker image'){
             steps{
                 script{
-                    dockerImage= docker.build("-f Web_Testing/Dockerfile") registery
+                        dir('./Web_Testing'){
+                            dockerImage= docker.build registery
+                    }
                 }
             }
         }
