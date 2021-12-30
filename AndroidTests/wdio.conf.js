@@ -4,7 +4,7 @@ exports.config = {
     // Runner Configuration
     // ====================
     //
-    runner: 'local',
+    runner: 'local', 
     port: 4723,
     //
     // ==================
@@ -45,7 +45,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -57,8 +57,11 @@ exports.config = {
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
         platformName: 'Android',
+        'appium:platformVersion': "9",
+        'appium:udid': "emulator-5554",
         'appium:deviceName': 'Pixel 4 API 28',
-        'appium:app': 'C:/Users/swak/OneDrive/Desktop/SE_PROJECT/Testing-Oranges/AndroidTests/app-debug.apk',
+        'appium:app': 'F:/Software Engineering/Testing-Oranges/AndroidTests/app-debug.apk',
+        "appium:automationName": "UiAutomator2" 
         //
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -114,7 +117,6 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     path:'/wd/hub',
-    services: ['selenium-standalone','appium'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
