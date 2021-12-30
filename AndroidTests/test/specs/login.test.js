@@ -12,7 +12,7 @@ describe('ًlogin tests', ()=>{
     const emailField = await LoginPOM.emailTextBox();
     const passwordField = await LoginPOM.passwordTextBox();
     const loginbtn = await LoginPOM.continueButton().getAttribute("enabled");*/
-    it.only('no email no password', async()=>{
+    it('no email no password', async()=>{
         
         await (await LoginPOM.loginButton()).click();
         await driver.pause(2000)
