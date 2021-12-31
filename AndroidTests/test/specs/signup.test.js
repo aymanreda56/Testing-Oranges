@@ -1,4 +1,4 @@
-/*const { assert, expect } = require("chai")
+const { assert, expect } = require("chai")
 
 const Dashboard = require("../pageobjects/Dashboard.page.js")
 
@@ -129,5 +129,25 @@ describe('ًsignup tests', ()=>{
             expect(result).equal("You'll need a name to make\nyour own posts, Customize\nyour blog, and message\npeople."); 
         })
     })
+
+    it.only('untaken email and untaken name ', async()=>{
+        
+        await (await SignupPOM.signupButton()).click();
+        await driver.pause(2000)
+        await (await SignupPOM.signupWithEmailButton()).click();
+        driver.pause(2000)
+        await (await SignupPOM.emailTextBox()).addValue("qdzdkivoetwgjuhvee@bvhrs.com");
+        driver.pause(2000)
+        await (await SignupPOM.passwordTextBox()).addValue("ahmede4u");
+        driver.pause(2000)
+        await (await SignupPOM.ageTextBox()).addValue("21");
+        driver.pause(2000)
+        await (await SignupPOM.nameTextBox()).addValue("new1");
+        driver.pause(2000)
+        await (await SignupPOM.doneButton()).click();
+        await (await Dashboard.homeButton()).getAttribute("content-desc").then((result)=>{
+            expect(result).equal("home"); 
+        })
+    })
    
-})*/
+})
