@@ -8,7 +8,7 @@ const LoginPOM = require ("../pageobjects/login.page.js");
 
 describe('ًlogin tests', ()=>{
 
-    it('no email no password', async()=>{
+    it.only('no email no password', async()=>{
         
         await (await LoginPOM.loginButton()).click();
         await driver.pause(2000)
@@ -20,9 +20,9 @@ describe('ًlogin tests', ()=>{
         driver.pause(2000)
         await (await LoginPOM.continueButton()).getAttribute("enabled").then((result)=>{
             expect(result).equal("false"); 
-        })
-        
+        }) 
     })
+
     it('non existing email no password', async()=>{
         
         await (await LoginPOM.loginButton()).click();
@@ -122,7 +122,7 @@ describe('ًlogin tests', ()=>{
         });
     })
 
-    it.only('existing email and correct password', async()=>{
+    it('existing email and correct password', async()=>{
         
         await (await LoginPOM.loginButton()).click();
         await driver.pause(2000)
