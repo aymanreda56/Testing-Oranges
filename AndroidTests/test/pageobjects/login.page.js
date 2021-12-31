@@ -54,6 +54,26 @@ class LoginPage  {
         });
         return POM
     }
+    async errorInEmail(){
+        const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/login_with_email_invalid_email_message")';
+
+        const POM = (await $(`android=${selector}`)); 
+
+        await POM.waitForDisplayed({
+            timeout: 300000
+        });
+        return POM
+    }
+    async errorField(){
+        const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/login_with_email_wrong_message")';
+
+        const POM = (await $(`android=${selector}`)); 
+
+        await POM.waitForDisplayed({
+            timeout: 300000
+        });
+        return POM
+    }
 
     /*async login (username, password) {
         await this.emailTextBox.setValue(username);
