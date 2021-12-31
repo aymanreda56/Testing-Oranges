@@ -1,12 +1,25 @@
 export class HomePage{
     navigate(){
       cy
-        .visit('https://www.tumblr.com/dashboard');
+        .visit('http://tumblr4u.eastus.cloudapp.azure.com/');
       
-      cy.fixture('PersonalData').then((user)=>{
-        let token = user.token;
+        cy.contains('Log in').click();
+      
+        cy.fixture('user').then((user)=>{
         cy
-          .setCookie('sid',`${token}`);
+          .get('[placeholder="Email"]')
+          .type(user.users[4].email);
+          
+        cy
+          .get('[placeholder="Password"]')
+          .type(user.users[4].password);
+        cy.wait(2000);
+        cy.get('[type="submit"]').click();
+        cy.wait(2000);
+        
+          let token = user.users[4].token;
+          window.localStorage.setItem('token',`${token}`);
+
       })  
     }
 

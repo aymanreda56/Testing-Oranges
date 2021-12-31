@@ -1,0 +1,59 @@
+{
+    "users" : [{
+
+    "email" : "naynoona111@yahoo.com",
+    "password" : "Ayman_mohamed56",
+    "blogName" : "naynoona",
+    "followedBlogs" : ["hangtightwmarcie", "prinnay", "kkokeiko", "ancientsstudies", "lascivious-machinations", "killua21", "metamorphesque",
+         "ousia-poetica", "staff"],
+    "followedTags" : ["football", "nutrition", "health & fitness", "sports"],
+    "keyword" : [],
+    "token":"aRg9s98FxoZp8eBjAuXQny50UGEA2ySKORQ9r7TTvibQ99wHve.anIL3GSCrsIubxeRvLCMJSv1G4OAHNgJUlgRjREsFHK6vMhp62"
+    }
+    ,
+
+    {
+    "email" : "ahmedspiderman7@gmail.com",
+    "password" : "Tumblr4me_12",
+    "blogName" : "killua21",
+    "followedBlogs" : ["naynoona", "staff"],
+    "followedTags" : ["sport", "arcane"],
+    "keyword" : ["arcane"],
+    "token":"aOU900eqTI5GU5K9KPpThj3vCSEWUmzK07QfvKZUHMFhlzGO4p.aECInpH6QLMzyI9fdJJPGWUV9uFnAksnSsknGuBaH3txEmBNYA"
+    },
+
+    {
+        "email" : "ana@ana.com",
+        "password" : "123456789mM",
+        "blogName" : "Marim",
+        "followedBlogs" : ["sillydegu", "cataster"],
+        "followedTags" : [],
+        "keyword" : ["love"],
+        "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuYUBhbmEuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2NDAyNTMxMjZ9.8VQMI5NnIGTj_Hb7J2jo0fhOSBcp5Nssdl5NGxHSHx0"
+    },
+    {
+        "email" : "reem.atala555@gmail.com",
+        "password" : "1234",
+        "blogName" : "marim22",
+        "followedBlogs" : ["reem"],
+        "keyword" : ["industry", "arts"],
+        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJlZW0uYXRhbGE1NTVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2NDA2Nzk4MDd9.iec2rio6qGZxrrtStGmg6md515Uwz96Z6MEQwQn46uo"
+    },
+    {
+        "email" : "nourtx73@gmail.com",
+        "password" : "1234",
+        "blogName" : "rawaa2000",
+        "followedBlogs" : ["61c9e2100ea834c610490b64"],
+        "keyword" : ["cmp","industry", "arts"],
+        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhYWllLjE0MjAwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjQwNjkwOTM4fQ.ivWszND-P4WCDiMrzWQLT6LwcJZ7u6W0o256laxlQl8"
+
+    }]
+
+
+
+    
+    
+}
+
+
+ 
