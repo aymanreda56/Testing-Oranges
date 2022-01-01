@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2021-12-28T13:46:36.067Z",
-    "end": "2021-12-28T13:46:46.354Z",
-    "duration": 10287,
+    "start": "2022-01-01T20:46:58.219Z",
+    "end": "2022-01-01T20:47:41.030Z",
+    "duration": 42811,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "b4ffa0d8-ea77-4598-a299-c6d58e8c61f7",
+      "uuid": "8e40aad7-4488-461a-9ef1-88fad0a70b1d",
       "title": "",
-      "fullFile": "cypress/integration/home.spec.js",
-      "file": "cypress/integration/home.spec.js",
+      "fullFile": "cypress/integration/profile.spec.js",
+      "file": "cypress/integration/profile.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "73c1ab5b-3475-47c3-9561-ad2abfc6af75",
-          "title": "Home page tests",
+          "uuid": "99112bfc-d7e7-4a01-a4cd-93acca1b7450",
+          "title": "palette colours",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "TEST",
-              "fullTitle": "Home page tests TEST",
+              "title": "changing palette mutiple times",
+              "fullTitle": "palette colours changing palette mutiple times",
               "timedOut": null,
-              "duration": 8864,
+              "duration": 41349,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.visit('https://www.tumblr.com/login');\ncy.get('[aria-label=\"email\"]').type('ahmedspiderman7@gmail.com');\n/*cy\n  .intercept({\n    method:'GET',\n    url:'/dashboard'\n  }).as('logIn');*/\ncy.get('[aria-label=\"password\"]').type('Tumblr4me_12');\ncy.wait(2000);\ncy.get('[aria-label=\"Log in\"]').click();\ncy.wait(2000);\ncy.get('a[aria-label=\"home\"]').click();\ncy.url().should('include', '/dashboard');",
+              "code": "cy.get('[aria-label=\"Account\"]').click();\nfor (var i = 0; i < 12; i++) {\n  cy.get('[aria-label=\"Change Palette\"]').click();\n}",
               "err": {
-                "message": "CypressError: `cy.visit()` failed because you are attempting to visit a URL that is of a different origin.\n\nThe new URL is considered a different origin because the following parts of the URL are different:\n\n  > protocol, superdomain\n\nYou may only `cy.visit()` same-origin URLs within a single test.\n\nThe previous URL you visited was:\n\n  > 'http://tumblr4u.eastus.cloudapp.azure.com'\n\nYou're attempting to visit this URL:\n\n  > 'https://www.tumblr.com'\n\nYou may need to restructure some of your test code to avoid this problem.\n\nhttps://on.cypress.io/cannot-visit-different-origin-domain",
-                "estack": "CypressError: `cy.visit()` failed because you are attempting to visit a URL that is of a different origin.\n\nThe new URL is considered a different origin because the following parts of the URL are different:\n\n  > protocol, superdomain\n\nYou may only `cy.visit()` same-origin URLs within a single test.\n\nThe previous URL you visited was:\n\n  > 'http://tumblr4u.eastus.cloudapp.azure.com'\n\nYou're attempting to visit this URL:\n\n  > 'https://www.tumblr.com'\n\nYou may need to restructure some of your test code to avoid this problem.\n\nhttps://on.cypress.io/cannot-visit-different-origin-domain\n    at cannotVisitDifferentOrigin (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:157297:72)\n    at go (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:158123:18)\n    at visit (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:158311:16)\n    at Context.visit (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/runner/cypress_runner.js:158314:14)\nFrom Your Spec Code:\n    at Context.eval (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/tests?p=cypress\\integration\\home.spec.js:107:8)",
+                "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `[aria-label=\"Account\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `[aria-label=\"Account\"]`, but never found it.\n    at Context.eval (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/tests?p=cypress\\integration\\profile.spec.js:131:8)",
                 "diff": null
               },
-              "uuid": "3c0762a0-b87f-4f4c-89c8-90e924680023",
-              "parentUUID": "73c1ab5b-3475-47c3-9561-ad2abfc6af75",
+              "uuid": "54b7f516-9e37-43b6-bada-6796c8eb1ef2",
+              "parentUUID": "99112bfc-d7e7-4a01-a4cd-93acca1b7450",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "3c0762a0-b87f-4f4c-89c8-90e924680023"
+            "54b7f516-9e37-43b6-bada-6796c8eb1ef2"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 8864,
+          "duration": 41349,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

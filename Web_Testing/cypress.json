@@ -15,7 +15,7 @@
         }
     },
     "env": {
-        "MAILSLURP_API_KEY": "8777ce9b01b7481c3ec5af388bce5d4dbed9104201403f64b254ed19cc7aee3d"
+        "MAILSLURP_API_KEY": "cbd0e5c53f70c6a264ecf34d829dfa9241eed406e173092fc9abe8df58acbae0"
       },
       "defaultCommandTimeout": 30000,
     "responseTimeout": 30000,

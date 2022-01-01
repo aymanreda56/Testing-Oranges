@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
+    "tests": 2,
     "passes": 0,
     "pending": 0,
-    "failures": 1,
-    "start": "2021-12-28T13:45:44.572Z",
-    "end": "2021-12-28T13:46:29.446Z",
-    "duration": 44874,
-    "testsRegistered": 1,
+    "failures": 2,
+    "start": "2022-01-01T20:45:29.492Z",
+    "end": "2022-01-01T20:46:48.477Z",
+    "duration": 78985,
+    "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
@@ -18,41 +18,63 @@
   },
   "results": [
     {
-      "uuid": "f796fcac-25e4-4a97-acc2-3cb23fb47d29",
+      "uuid": "e71d6596-d3f9-4d15-a419-5813d3b52bf2",
       "title": "",
-      "fullFile": "cypress/integration/chat.spec.js",
-      "file": "cypress/integration/chat.spec.js",
+      "fullFile": "cypress/integration/logout.spec.js",
+      "file": "cypress/integration/logout.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "bbb9bbaa-d84f-436f-8ac6-46ff54aed550",
-          "title": "chating from one account",
+          "uuid": "75f98c2a-e1da-4626-8790-993d674de632",
+          "title": "block a user",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "click on the chat tab",
-              "fullTitle": "chating from one account click on the chat tab",
+              "title": "logout",
+              "fullTitle": "block a user logout",
               "timedOut": null,
-              "duration": 41704,
+              "duration": 39142,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.get('[aria-label=\"emoji laughing\"]').click();\ncy.contains('New Message').click();\ncy.get('#divider').get('#chatItem').click();\ncy.get('[aria-label=\"Send\"]').click();\ncy.get('[aria-label=\"emoji laughing\"] #icon').click();\ncy.get('#chatItem').click(); //first chat account to appear\ncy.get;",
+              "code": "cy.get(':nth-child(6) > #dropDown > #icon').click();\ncy.get('#content > :nth-child(1) > :nth-child(2)').contains('Logout').click();\ncy.get('.popup-inner').contains(\"Ok\").click();\ncy.get('.popup-inner').contains(\"Ok\").click();\ncy.wait(2000);\ncy.url().should('equal', 'http://tumblr4u.eastus.cloudapp.azure.com/');",
               "err": {
-                "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `#chatItem`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `#chatItem`, but never found it.\n    at Context.eval (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/tests?p=cypress\\integration\\chat.spec.js:111:24)",
+                "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `:nth-child(6) > #dropDown > #icon`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `:nth-child(6) > #dropDown > #icon`, but never found it.\n    at Context.eval (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/tests?p=cypress\\integration\\logout.spec.js:107:8)",
                 "diff": null
               },
-              "uuid": "b4143093-8d66-4347-9651-9459813f33fb",
-              "parentUUID": "bbb9bbaa-d84f-436f-8ac6-46ff54aed550",
+              "uuid": "6ed1d7aa-944c-4053-817d-7faa077cb56e",
+              "parentUUID": "75f98c2a-e1da-4626-8790-993d674de632",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "cancel logout",
+              "fullTitle": "block a user cancel logout",
+              "timedOut": null,
+              "duration": 37757,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(6) > #dropDown > #icon').click();\ncy.get('#content > :nth-child(1) > :nth-child(2)').contains('Logout').click();\ncy.get('#buttons > :nth-child(1)').contains('Cancel').click();\ncy.url().should('equal', 'http://tumblr4u.eastus.cloudapp.azure.com/home');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `:nth-child(6) > #dropDown > #icon`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `:nth-child(6) > #dropDown > #icon`, but never found it.\n    at Context.eval (http://tumblr4u.eastus.cloudapp.azure.com/__cypress/tests?p=cypress\\integration\\logout.spec.js:115:8)",
+                "diff": null
+              },
+              "uuid": "3c09edd6-a942-4a0f-9b05-6e72c77d39ff",
+              "parentUUID": "75f98c2a-e1da-4626-8790-993d674de632",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +82,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "b4143093-8d66-4347-9651-9459813f33fb"
+            "6ed1d7aa-944c-4053-817d-7faa077cb56e",
+            "3c09edd6-a942-4a0f-9b05-6e72c77d39ff"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 41704,
+          "duration": 76899,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

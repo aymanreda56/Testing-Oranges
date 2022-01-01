@@ -1,4 +1,4 @@
-import { HomePage } from "../pageObjects/home"
+/*import { HomePage } from "../pageObjects/home"
 
 describe('Home page tests',()=>{
     const homeOBJ = new HomePage();
@@ -8,31 +8,17 @@ describe('Home page tests',()=>{
        homeOBJ.navigate();
     })
 
-    it('TEST', () => {
+    it('post text', () => {
+        cy.get('.createPost > ul > :nth-child(1)').click();
+        cy.get('.ProseMirror > .placeholderTitleClass').click(); //title
+        cy.get('.ProseMirror > .placeholderTitleClass').type('hello');
+        cy.get('.ProseMirror > .textClass').click();   //text
+        cy.get('.ProseMirror > .textClass').type('how are you?');
+        cy.get('#theTags').click();  //tags
+        cy.get('#theTags').type('greetings');
+        cy.get('.nonDisabledBtn').click();  //post button
+        cy.get('.nonDisabledBtn').type('greetings');
+        cy.reload();
 
-
-        cy
-          .visit('https://www.tumblr.com/login');
-        cy
-          .get('[aria-label="email"]')
-          .type('ahmedspiderman7@gmail.com');
-        /*cy
-          .intercept({
-            method:'GET',
-            url:'/dashboard'
-          }).as('logIn');*/
-        cy
-          .get('[aria-label="password"]')
-          .type('Tumblr4me_12');
-
-        cy.wait(2000);
-        cy.get('[aria-label="Log in"]').click();
-        cy.wait(2000);
-        cy
-        .get('a[aria-label="home"]')
-        .click();
-      cy
-        .url()
-        .should('include','/dashboard');
     })
-})
+})*/
