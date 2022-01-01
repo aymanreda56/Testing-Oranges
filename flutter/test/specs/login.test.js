@@ -6,7 +6,11 @@ const LoginPOM = require ("../pageobjects/Login.page.js");
 
 
 
-describe('ًlogin tests', ()=>{
+
+
+describe('ًlogin tests', async()=>{
+
+
 
     it('no email no password', async()=>{
         
@@ -39,6 +43,7 @@ describe('ًlogin tests', ()=>{
         driver.pause(2000);
         let asserter = $('~Required Password');
         await expect(await asserter.getAttribute('displayed')).equal('true');
+
     })
 
     it('non existing email wrong password', async()=>{
@@ -72,41 +77,7 @@ describe('ًlogin tests', ()=>{
         
     })
 
-    /*
-    it('not an email no password', async()=>{
-        
-        await (await LoginPOM.loginButton()).click();
-        await driver.pause(2000)
-        await (await LoginPOM.loginWithEmailButton()).click();
-        driver.pause(2000)
-        await (await LoginPOM.emailTextBox()).addValue("ahmeddd");
-        driver.pause(2000)
-        await (await LoginPOM.passwordTextBox()).addValue(""); 
-        driver.pause(2000)
-        await (await LoginPOM.continueButton()).getAttribute("enabled").then((result)=>{
-            expect(result).equal("false"); 
-        })
-        
-    })
     
-
-    it('no email incorrect password', async()=>{
-        
-        await (await LoginPOM.loginButton()).click();
-        await driver.pause(2000)
-        await (await LoginPOM.loginWithEmailButton()).click();
-        driver.pause(2000)
-        await (await LoginPOM.emailTextBox()).addValue("");
-        driver.pause(2000)
-        await (await LoginPOM.passwordTextBox()).addValue("ahmeddd"); 
-        driver.pause(2000)
-        await (await LoginPOM.continueButton()).getAttribute("enabled").then((result)=>{
-            expect(result).equal("false"); 
-        })
-        
-    })
-    */
-
     it('no email short password', async()=>{
         
         await (await LoginPOM.backBtn).click();
@@ -149,7 +120,7 @@ describe('ًlogin tests', ()=>{
         await (await LoginPOM.LoginContinueBtn()).click();
         driver.pause(2000);
         let asserter = $('//android.view.View[@index=0]');
-        await expect(await asserter.getAttribute('content-desc')).equal("Enter a Valid email");
+        await expect(await asserter.getAttribute('content-desc')).equal('Enter a Valid email');
        // await (await LoginPOM.errorInEmail()).getText().then((result)=>{
        //     expect(result).equal("This email address isn't correct. Please try again."); 
        // })
@@ -173,12 +144,10 @@ describe('ًlogin tests', ()=>{
         driver.pause(2000);
         await (await LoginPOM.LogInFinalBtn).click(); 
         driver.pause(2000);
-        let asserter = $('//android.view.View[@index=4]');
-        await (await asserter.getAttribute('content-desc').then((res)=>{
-            expect(res).equal("incorrect password");
-        }));
+        let asserter = $('//android.view.View[@content-desc="Enter a Valid email"]');
+        await expect(await asserter.getAttribute('displayed')).equal('true');
         
-    })
+    });
 
     it('existing email and correct password', async()=>{
         await (await LoginPOM.PasswordField).click();
@@ -187,7 +156,7 @@ describe('ًlogin tests', ()=>{
         driver.pause(2000);
         await (await LoginPOM.LogInFinalBtn).click(); 
         driver.pause(2000);
-        let asserter = $('~home Tab 1 of 4');
+        let asserter = $('//android.view.View[@content-desc="home Tab 1 of 4"]');
         await expect(await asserter.getAttribute('displayed')).equal('true');
     });
 
@@ -195,6 +164,82 @@ describe('ًlogin tests', ()=>{
 });
 
 
+
 describe('sign up', ()=>{
-    it('')
-})
+    beforeEach('reset everything',async()=>{
+        driver.reset();
+    });
+    
+    it('age smaller than 18' , async()=>{
+        await (await LoginPOM.SignupBtn).click();
+        driver.pause(2000);
+        await (await LoginPOM.SignupEmailBtn).click();
+        driver.pause(2000);
+        await (await LoginPOM.AgeField).click();
+        driver.pause(2000);
+        await (await LoginPOM.AgeField).addValue("4");
+        driver.pause(2000);
+        await (await LoginPOM.nextBtn).click();
+        driver.pause(2000);
+        await expect(await LoginPOM.ageasserter.getAttribute('content-desc')).equal("You're too young for this");
+    });
+
+    it('bigger than 150', async()=>{
+        await (await LoginPOM.SignupBtn).click();
+        driver.pause(2000);
+        await (await LoginPOM.SignupEmailBtn).click();
+        driver.pause(2000);
+        await (await LoginPOM.AgeField).click();
+        driver.pause(2000);
+        await (await LoginPOM.AgeField).addValue("180");
+        driver.pause(2000);
+        await (await LoginPOM.nextBtn).click();
+        driver.pause(2000);
+        await expect(await LoginPOM.ageasserter.getAttribute('content-desc')).equal("invalid Age");
+    });
+
+    it('correct age', async()=>{
+        await (await LoginPOM.SignupBtn).click();
+        driver.pause(2000);
+        await (await LoginPOM.SignupEmailBtn).click();
+        driver.pause(2000);
+        await (await LoginPOM.AgeField).click();
+        driver.pause(2000);
+        await (await LoginPOM.AgeField).addValue("20");
+        driver.pause(2000);
+        await (await LoginPOM.nextBtn).click();
+        driver.pause(2000);
+        let asserter = $("~What do you like? Whatever you're into, you'll find here.");
+        await expect (await asserter.getAttribute('displayed')).equal('true');
+
+    });
+
+    it('choosing some tags', async()=>{
+        await (await LoginPOM.SignupBtn).click();
+        driver.pause(2000);
+        await (await LoginPOM.SignupEmailBtn).click();
+        driver.pause(2000);
+        await (await LoginPOM.AgeField).click();
+        driver.pause(2000);
+        await (await LoginPOM.AgeField).addValue("20");
+        driver.pause(2000);
+        await (await LoginPOM.nextBtn).click();
+        driver.pause(2000);
+        let asserter = $("~What do you like? Whatever you're into, you'll find here.");
+        await expect (await asserter.getAttribute('displayed')).equal('true');
+
+        await (await LoginPOM.interestsCards_1).click();
+        await (await LoginPOM.interestsCards_2).click();
+        await (await LoginPOM.interestsCards_3).click();
+        driver.pause(2000);
+        await (await LoginPOM.interestsCards_4).click();
+        await (await LoginPOM.interestsCards_5).click();
+        driver.pause(2000);
+        await (await LoginPOM.pickBtn).click();
+        driver.pause(2000);
+        let asserter = $('~home Tab 1 of 4');
+        await expect(await asserter.getAttribute('displayed')).equal('true');
+    });
+
+});
+
