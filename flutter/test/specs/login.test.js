@@ -189,5 +189,12 @@ describe('ًlogin tests', ()=>{
         driver.pause(2000);
         let asserter = $('~home Tab 1 of 4');
         await expect(await asserter.getAttribute('displayed')).equal('true');
-    })
+    });
+
+
+});
+
+
+describe('sign up', ()=>{
+    it('')
 })

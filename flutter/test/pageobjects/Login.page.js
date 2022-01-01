@@ -3,7 +3,6 @@ class Login {
 
 
     get LoginBtn() {return $('~Log in')};
-    get SignupBtn() {return $('~Sign up')};
     get LoginEmail() {return $('~Login with Email')};
     get LoginGoogle() {return $('~Login with Google')};
 
@@ -51,12 +50,23 @@ class Login {
     get LogInFinalBtn() {return $('~Log in')};
 
 
-    get SignupEmail() {return $('~Sign up with Email')};
-    get SignupGoogle() {return $('~Sign up with Google')};
     get backBtn() {return $('~Back')};
-    get AgeField() {return $('//android.widget.EditText[@text="How old are you?"]')};
     get nextBtn() {return $('~Next')};
 
+
+    //////////////////////////////////////////////////////////// SIGN UP //////////////////////////////////////////////////////////////////////
+
+    get SignupBtn() {return $('~Sign up')};
+    get SignupEmailBtn() {return $('~Sign up with Email')};
+    get SignupGoogleBtn() {return $('~Sign up with Google')};
+    get AgeField() {return $('//android.widget.EditText[@index=2]')};
+    get ageasserter() {return $('//android.view.View[@index=0]')};
+    get interestsCards_1() {return $('//android.view.View[@index=1]]')};
+    get interestsCards_2() {return $('//android.view.View[@index=2]]')};
+    get interestsCards_3() {return $('//android.view.View[@index=3]]')};
+    get interestsCards_4() {return $('//android.view.View[@index=4]]')};
+    get interestsCards_5() {return $('//android.view.View[@index=5]]')};
+    get pickBtn() {return $('//android.widget.Button[@index=0]')};
 
 
 
