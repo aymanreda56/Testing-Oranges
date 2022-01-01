@@ -5,7 +5,7 @@ const Dashboard = require("../pageobjects/Dashboard.page.js")
 const LoginPOM = require ("../pageobjects/Login.page.js");
 
 
-/*
+
 
 
 
@@ -93,4 +93,3 @@ describe('sign up', ()=>{
 });
 
 
-*/

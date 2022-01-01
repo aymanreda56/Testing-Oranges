@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wdio/cli": "^7.16.8"
+    "@wdio/cli": "^7.16.8",
+    "mocha-allure-reporter": "^1.4.0"
   },
   "devDependencies": {
     "@wdio/appium-service": "^7.16.6",
@@ -19,6 +20,8 @@
     "@wdio/mocha-framework": "^7.16.6",
     "@wdio/selenium-standalone-service": "^7.16.6",
     "@wdio/spec-reporter": "^7.16.4",
-    "chai": "^4.3.4"
+    "allure-mocha": "^2.0.0-beta.14",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
   }
 }
