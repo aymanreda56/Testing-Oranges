@@ -7,8 +7,11 @@ const LoginPOM = require ("../pageobjects/login.page.js");
 
 
 describe('ًlogin tests', ()=>{
+    beforeEach('login', async()=>{
+        await driver.reset();
+    });
 
-    it.only('no email no password', async()=>{
+    it('no email no password', async()=>{
         
         await (await LoginPOM.loginButton()).click();
         await driver.pause(2000)
@@ -118,7 +121,7 @@ describe('ًlogin tests', ()=>{
         await (await LoginPOM.continueButton()).click();
         driver.pause(2000)
         await (await LoginPOM.errorField()).getText().then((result)=>{
-            expect(result).equal("Incorrect email address or password. Please try agian"); 
+            expect(result).equal("Incorrect email address or password. Please try again"); 
         });
     })
 

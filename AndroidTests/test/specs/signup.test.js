@@ -7,6 +7,10 @@ const SignupPOM = require ("../pageobjects/signup.page.js");
 
 
 describe('ًsignup tests', ()=>{
+    beforeEach('login', async()=>{
+        await driver.reset();
+    });
+
     it('no email no password no age no name', async()=>{
         
         await (await SignupPOM.signupButton()).click();
@@ -130,19 +134,19 @@ describe('ًsignup tests', ()=>{
         })
     })
 
-    it.only('untaken email and untaken name ', async()=>{
+    it('untaken email and untaken name ', async()=>{
         
         await (await SignupPOM.signupButton()).click();
         await driver.pause(2000)
         await (await SignupPOM.signupWithEmailButton()).click();
         driver.pause(2000)
-        await (await SignupPOM.emailTextBox()).addValue("qdzdkivoetwgjuhvee@bvhrs.com");
+        await (await SignupPOM.emailTextBox()).addValue("uqc31422@boofx.com");
         driver.pause(2000)
         await (await SignupPOM.passwordTextBox()).addValue("ahmede4u");
         driver.pause(2000)
         await (await SignupPOM.ageTextBox()).addValue("21");
         driver.pause(2000)
-        await (await SignupPOM.nameTextBox()).addValue("new1");
+        await (await SignupPOM.nameTextBox()).addValue("new12");
         driver.pause(2000)
         await (await SignupPOM.doneButton()).click();
         await (await Dashboard.homeButton()).getAttribute("content-desc").then((result)=>{
