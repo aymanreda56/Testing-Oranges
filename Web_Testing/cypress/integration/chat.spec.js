@@ -1,9 +1,5 @@
 
-
-
 import { HomePage } from "../pageObjects/home.js"
-
-
 
 describe('chating from one account', ()=>{
     const homeOBJ = new HomePage();

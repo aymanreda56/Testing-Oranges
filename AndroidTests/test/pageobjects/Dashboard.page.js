@@ -15,6 +15,17 @@ class Dashboard{
         });
         return POM
     }
+    async writePost() {
+        const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/write_post_button_home_fragment")';
+
+        const POM = (await $(`android=${selector}`));
+
+        await POM.waitForDisplayed({
+            timeout: 300000
+        });
+        return POM
+    }
+    	
     async searchButton() {
         const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/navigation_search")';
 
@@ -35,6 +46,18 @@ class Dashboard{
         });
         return POM
     }
+
+    async activityButton() {
+        const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/navigation_activity")';
+
+        const POM = (await $(`android=${selector}`));
+
+        await POM.waitForDisplayed({
+            timeout: 300000
+        });
+        return POM
+    }
+
     async profileButton() {
         const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/navigation_profile")';
 
@@ -46,7 +69,16 @@ class Dashboard{
         return POM
     }
 
+    async profileButton() {
+        const selector = await 'new UiSelector().resourceId("com.example.tumblr4u:id/navigation_profile")';
 
+        const POM = (await $(`android=${selector}`));
+
+        await POM.waitForDisplayed({
+            timeout: 300000
+        });
+        return POM
+    }
 
 
 }
