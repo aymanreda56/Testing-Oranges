@@ -1,0 +1,156 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Can't call click on element with selector \"//android.widget.Button[@index=5]\" because element wasn't found",
+      "children" : [ {
+        "name" : "like button and assert the number of notes",
+        "uid" : "92cdba00342bf2a1",
+        "parentUid" : "7b8dbd8dda7a2108ec7b0ebd89ddb9e6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1641074188061,
+          "stop" : 1641074210407,
+          "duration" : 22346
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "Pixel 4 API 28 9-9" ]
+      } ],
+      "uid" : "7b8dbd8dda7a2108ec7b0ebd89ddb9e6"
+    }, {
+      "name" : "Can't call click on element with selector \"//android.widget.Button[@index=6]\" because element wasn't found",
+      "children" : [ {
+        "name" : "trash button",
+        "uid" : "7725594e71a0b7a8",
+        "parentUid" : "d1f2db35f764fdcab65281a4b65ebcb9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1641074210407,
+          "stop" : 1641074233136,
+          "duration" : 22729
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "Pixel 4 API 28 9-9" ]
+      } ],
+      "uid" : "d1f2db35f764fdcab65281a4b65ebcb9"
+    }, {
+      "name" : "Can't call click on element with selector \"~Report\" because element wasn't found",
+      "children" : [ {
+        "name" : "report button",
+        "uid" : "27edece39ea1e1b2",
+        "parentUid" : "9dcc33d250efbb74e788d9865d08867e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1641074233136,
+          "stop" : 1641074255365,
+          "duration" : 22229
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "Pixel 4 API 28 9-9" ]
+      } ],
+      "uid" : "9dcc33d250efbb74e788d9865d08867e"
+    }, {
+      "name" : "Can't call click on element with selector \"//android.widget.Button[@index=3]\" because element wasn't found",
+      "children" : [ {
+        "name" : "commenting",
+        "uid" : "b1592e9aa9aedd43",
+        "parentUid" : "53f786bebd934cc9022e6815a3be48fd",
+        "status" : "broken",
+        "time" : {
+          "start" : 1641074255365,
+          "stop" : 1641074277268,
+          "duration" : 21903
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "Pixel 4 API 28 9-9" ]
+      } ],
+      "uid" : "53f786bebd934cc9022e6815a3be48fd"
+    }, {
+      "name" : "Can't call click on element with selector \"//android.widget.Button[@index=7]\" because element wasn't found",
+      "children" : [ {
+        "name" : "edit post",
+        "uid" : "a54a89834b66afb1",
+        "parentUid" : "fffdd4874548f5e4bb08f78724ef918c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1641074277268,
+          "stop" : 1641074299027,
+          "duration" : 21759
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "Pixel 4 API 28 9-9" ]
+      } ],
+      "uid" : "fffdd4874548f5e4bb08f78724ef918c"
+    }, {
+      "name" : "Can't call getAttribute on element with selector \"//android.view.View[@content-desc=\"What do you like? Whatever you're into, you'll find here.\"]\" because element wasn't found",
+      "children" : [ {
+        "name" : "correct age",
+        "uid" : "cd1a5d2f001eade9",
+        "parentUid" : "a744fbab2d9886539cd54332c400eb45",
+        "status" : "broken",
+        "time" : {
+          "start" : 1641074325832,
+          "stop" : 1641074344470,
+          "duration" : 18638
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "Pixel 4 API 28 9-9" ]
+      } ],
+      "uid" : "a744fbab2d9886539cd54332c400eb45"
+    }, {
+      "name" : "java.lang.IllegalArgumentException: Unable to compile '//android.view.View[@index=1]]'. See Cause.",
+      "children" : [ {
+        "name" : "choosing some tags",
+        "uid" : "e7550145d2e1c881",
+        "parentUid" : "4ce85c9ff41cb91f5bbd08b926463c99",
+        "status" : "broken",
+        "time" : {
+          "start" : 1641074344470,
+          "stop" : 1641074352434,
+          "duration" : 7964
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "Pixel 4 API 28 9-9" ]
+      } ],
+      "uid" : "4ce85c9ff41cb91f5bbd08b926463c99"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

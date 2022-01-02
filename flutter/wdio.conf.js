@@ -60,7 +60,7 @@ exports.config = {
         'appium:platformVersion': "9",
         'appium:udid': "emulator-5554",
         'appium:deviceName': 'Pixel 4 API 28',
-        'appium:app': 'C:/Users/swak/OneDrive/Desktop/SE PROJ 2/Testing-Oranges/flutter/app-release.apk',
+        'appium:app': 'F:/Software Engineering/Testing-Oranges/flutter/app-release.apk',
         "appium:automationName": "UiAutomator2" 
         //
         // If outputDir is provided WebdriverIO can capture driver session logs
@@ -140,11 +140,15 @@ exports.config = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec',
 
-        'allure', {
-            outputDir: 'allure-results',
-            disableWebdriverStepsReporting: true,
-            disableWebdriverScreenshotsreporting: true,
-        }],
+        [
+            'allure',
+             {
+                outputDir: 'allure-results'
+                //disableWebdriverStepsReporting: true,
+                //disableWebdriverScreenshotsreporting: true,
+            },
+        ],
+    ],
 
 
     

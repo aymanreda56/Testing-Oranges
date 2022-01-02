@@ -1,0 +1,603 @@
+{
+  "uid" : "e7550145d2e1c881",
+  "name" : "choosing some tags",
+  "fullName" : "sign up.choosing some tags",
+  "historyId" : "d4da9c8d7abcd39d5be1b3dab9f0adb2",
+  "time" : {
+    "start" : 1641074344470,
+    "stop" : 1641074352434,
+    "duration" : 7964
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "java.lang.IllegalArgumentException: Unable to compile '//android.view.View[@index=1]]'. See Cause.",
+  "statusTrace" : "io.appium.uiautomator2.common.exceptions.InvalidSelectorException: java.lang.IllegalArgumentException: Unable to compile '//android.view.View[@index=1]]'. See Cause.\n                \tat io.appium.uiautomator2.core.AccessibilityNodeInfoDumper.findNodes(AccessibilityNodeInfoDumper.java:192)\n                \tat io.appium.uiautomator2.utils.ElementLocationHelpers.getXPathNodeMatch(ElementLocationHelpers.java:119)\n                \tat io.appium.uiautomator2.handler.FindElement.findElement(FindElement.java:88)\n                \tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:67)\n                \tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n                \tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:264)\n                \tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:258)\n                \tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n                \tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n                \tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n                \tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n                \tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n                \tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n                \tat io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n                \tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n                \tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n                \tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n                \tat io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)\n                \tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)\n                \tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n                \tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n                \tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n                \tat java.lang.Thread.run(Thread.java:764)\n                Caused by: java.lang.IllegalArgumentException: Unable to compile '//android.view.View[@index=1]]'. See Cause.\n                \tat org.jdom2.xpath.jaxen.JaxenCompiled.<init>(JaxenCompiled.java:152)\n                \tat org.jdom2.xpath.jaxen.JaxenXPathFactory.compile(JaxenXPathFactory.java:82)\n                \tat org.jdom2.xpath.XPathFactory.compile(XPathFactory.java:282)\n                \tat io.appium.uiautomator2.core.AccessibilityNodeInfoDumper.findNodes(AccessibilityNodeInfoDumper.java:190)\n                \t... 37 more\n                Caused by: org.jaxen.XPathSyntaxException: Unexpected ']'\n                \tat org.jaxen.BaseXPath.<init>(BaseXPath.java:121)\n                \tat org.jaxen.BaseXPath.<init>(BaseXPath.java:142)\n                \tat org.jdom2.xpath.jaxen.JaxenCompiled.<init>(JaxenCompiled.java:150)\n                \t... 40 more\n                Caused by: class org.jaxen.saxpath.XPathSyntaxException: //android.view.View[@index=1]]: 29: Unexpected ']'\n                \tat org.jaxen.saxpath.base.XPathReader.createSyntaxException(XPathReader.java:1085)\n                \tat org.jaxen.saxpath.base.XPathReader.parse(XPathReader.java:106)\n                \tat org.jaxen.BaseXPath.<init>(BaseXPath.java:116)\n                \t... 42 more\n                ",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "java.lang.IllegalArgumentException: Unable to compile '//android.view.View[@index=1]]'. See Cause.",
+    "statusTrace" : "io.appium.uiautomator2.common.exceptions.InvalidSelectorException: java.lang.IllegalArgumentException: Unable to compile '//android.view.View[@index=1]]'. See Cause.\n                \tat io.appium.uiautomator2.core.AccessibilityNodeInfoDumper.findNodes(AccessibilityNodeInfoDumper.java:192)\n                \tat io.appium.uiautomator2.utils.ElementLocationHelpers.getXPathNodeMatch(ElementLocationHelpers.java:119)\n                \tat io.appium.uiautomator2.handler.FindElement.findElement(FindElement.java:88)\n                \tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:67)\n                \tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n                \tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:264)\n                \tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:258)\n                \tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n                \tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n                \tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n                \tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n                \tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n                \tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n                \tat io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n                \tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n                \tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n                \tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n                \tat io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)\n                \tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)\n                \tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n                \tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n                \tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n                \tat java.lang.Thread.run(Thread.java:764)\n                Caused by: java.lang.IllegalArgumentException: Unable to compile '//android.view.View[@index=1]]'. See Cause.\n                \tat org.jdom2.xpath.jaxen.JaxenCompiled.<init>(JaxenCompiled.java:152)\n                \tat org.jdom2.xpath.jaxen.JaxenXPathFactory.compile(JaxenXPathFactory.java:82)\n                \tat org.jdom2.xpath.XPathFactory.compile(XPathFactory.java:282)\n                \tat io.appium.uiautomator2.core.AccessibilityNodeInfoDumper.findNodes(AccessibilityNodeInfoDumper.java:190)\n                \t... 37 more\n                Caused by: org.jaxen.XPathSyntaxException: Unexpected ']'\n                \tat org.jaxen.BaseXPath.<init>(BaseXPath.java:121)\n                \tat org.jaxen.BaseXPath.<init>(BaseXPath.java:142)\n                \tat org.jdom2.xpath.jaxen.JaxenCompiled.<init>(JaxenCompiled.java:150)\n                \t... 40 more\n                Caused by: class org.jaxen.saxpath.XPathSyntaxException: //android.view.View[@index=1]]: 29: Unexpected ']'\n                \tat org.jaxen.saxpath.base.XPathReader.createSyntaxException(XPathReader.java:1085)\n                \tat org.jaxen.saxpath.base.XPathReader.parse(XPathReader.java:106)\n                \tat org.jaxen.BaseXPath.<init>(BaseXPath.java:116)\n                \t... 42 more\n                ",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/appium/app/reset",
+      "time" : {
+        "start" : 1641074344471,
+        "stop" : 1641074346668,
+        "duration" : 2197
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1641074346669,
+        "stop" : 1641074346751,
+        "duration" : 82
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "fa94b854569e59b8",
+        "name" : "Request",
+        "source" : "fa94b854569e59b8.json",
+        "type" : "application/json",
+        "size" : 55
+      }, {
+        "uid" : "29abec9c815045af",
+        "name" : "Response",
+        "source" : "29abec9c815045af.json",
+        "type" : "application/json",
+        "size" : 508
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/elements",
+      "time" : {
+        "start" : 1641074346755,
+        "stop" : 1641074346779,
+        "duration" : 24
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "b632c3d0257f35dc",
+        "name" : "Request",
+        "source" : "b632c3d0257f35dc.json",
+        "type" : "application/json",
+        "size" : 55
+      }, {
+        "uid" : "55d884499492bdc9",
+        "name" : "Response",
+        "source" : "55d884499492bdc9.json",
+        "type" : "application/json",
+        "size" : 2
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/elements",
+      "time" : {
+        "start" : 1641074347258,
+        "stop" : 1641074347275,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "9393e66918beaf8c",
+        "name" : "Request",
+        "source" : "9393e66918beaf8c.json",
+        "type" : "application/json",
+        "size" : 55
+      }, {
+        "uid" : "fd27f48f5462c3d7",
+        "name" : "Response",
+        "source" : "fd27f48f5462c3d7.json",
+        "type" : "application/json",
+        "size" : 2
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/elements",
+      "time" : {
+        "start" : 1641074347762,
+        "stop" : 1641074348524,
+        "duration" : 762
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "69caa92b3cc09968",
+        "name" : "Request",
+        "source" : "69caa92b3cc09968.json",
+        "type" : "application/json",
+        "size" : 55
+      }, {
+        "uid" : "f76ed1eace81f945",
+        "name" : "Response",
+        "source" : "f76ed1eace81f945.json",
+        "type" : "application/json",
+        "size" : 148
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1641074348527,
+        "stop" : 1641074349127,
+        "duration" : 600
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "d337c865c13773c0",
+        "name" : "Request",
+        "source" : "d337c865c13773c0.json",
+        "type" : "application/json",
+        "size" : 55
+      }, {
+        "uid" : "b49700f0dd2e31c9",
+        "name" : "Response",
+        "source" : "b49700f0dd2e31c9.json",
+        "type" : "application/json",
+        "size" : 136
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element/00000000-0000-0443-0000-000700000006/click",
+      "time" : {
+        "start" : 1641074349129,
+        "stop" : 1641074349159,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1641074349160,
+        "stop" : 1641074349190,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "10f31ae0f4abba04",
+        "name" : "Request",
+        "source" : "10f31ae0f4abba04.json",
+        "type" : "application/json",
+        "size" : 66
+      }, {
+        "uid" : "c0132dd125efb6a9",
+        "name" : "Response",
+        "source" : "c0132dd125efb6a9.json",
+        "type" : "application/json",
+        "size" : 508
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/elements",
+      "time" : {
+        "start" : 1641074349193,
+        "stop" : 1641074349220,
+        "duration" : 27
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "ae914c299f4f8459",
+        "name" : "Request",
+        "source" : "ae914c299f4f8459.json",
+        "type" : "application/json",
+        "size" : 66
+      }, {
+        "uid" : "c53ead30505de156",
+        "name" : "Response",
+        "source" : "c53ead30505de156.json",
+        "type" : "application/json",
+        "size" : 2
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/elements",
+      "time" : {
+        "start" : 1641074349694,
+        "stop" : 1641074350230,
+        "duration" : 536
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "b275cc74bbe46511",
+        "name" : "Request",
+        "source" : "b275cc74bbe46511.json",
+        "type" : "application/json",
+        "size" : 66
+      }, {
+        "uid" : "612f85b7f1cab74d",
+        "name" : "Response",
+        "source" : "612f85b7f1cab74d.json",
+        "type" : "application/json",
+        "size" : 148
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1641074350233,
+        "stop" : 1641074350250,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "3d8f0cbac531e17e",
+        "name" : "Request",
+        "source" : "3d8f0cbac531e17e.json",
+        "type" : "application/json",
+        "size" : 66
+      }, {
+        "uid" : "4471096becec46e4",
+        "name" : "Response",
+        "source" : "4471096becec46e4.json",
+        "type" : "application/json",
+        "size" : 136
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element/00000000-0000-0443-0000-000e00000006/click",
+      "time" : {
+        "start" : 1641074350252,
+        "stop" : 1641074350277,
+        "duration" : 25
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1641074350277,
+        "stop" : 1641074350312,
+        "duration" : 35
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "7830c24064b17292",
+        "name" : "Request",
+        "source" : "7830c24064b17292.json",
+        "type" : "application/json",
+        "size" : 72
+      }, {
+        "uid" : "7c1975f8ba5cd4e5",
+        "name" : "Response",
+        "source" : "7c1975f8ba5cd4e5.json",
+        "type" : "application/json",
+        "size" : 544
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/elements",
+      "time" : {
+        "start" : 1641074350316,
+        "stop" : 1641074350357,
+        "duration" : 41
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "cd6a4e256e28d9ef",
+        "name" : "Request",
+        "source" : "cd6a4e256e28d9ef.json",
+        "type" : "application/json",
+        "size" : 72
+      }, {
+        "uid" : "8a745fda9a7f388d",
+        "name" : "Response",
+        "source" : "8a745fda9a7f388d.json",
+        "type" : "application/json",
+        "size" : 2
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/elements",
+      "time" : {
+        "start" : 1641074350831,
+        "stop" : 1641074351373,
+        "duration" : 542
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "4385ee5acf9c58f1",
+        "name" : "Request",
+        "source" : "4385ee5acf9c58f1.json",
+        "type" : "application/json",
+        "size" : 72
+      }, {
+        "uid" : "e644b813c436f972",
+        "name" : "Response",
+        "source" : "e644b813c436f972.json",
+        "type" : "application/json",
+        "size" : 148
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1641074351376,
+        "stop" : 1641074351409,
+        "duration" : 33
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "fa2765593d33b4e2",
+        "name" : "Request",
+        "source" : "fa2765593d33b4e2.json",
+        "type" : "application/json",
+        "size" : 72
+      }, {
+        "uid" : "7e89fc61accc23c1",
+        "name" : "Response",
+        "source" : "7e89fc61accc23c1.json",
+        "type" : "application/json",
+        "size" : 136
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element/00000000-0000-0443-0000-001400000006/click",
+      "time" : {
+        "start" : 1641074351411,
+        "stop" : 1641074351434,
+        "duration" : 23
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1641074351434,
+        "stop" : 1641074351461,
+        "duration" : 27
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "c651f14510a1f23e",
+        "name" : "Request",
+        "source" : "c651f14510a1f23e.json",
+        "type" : "application/json",
+        "size" : 72
+      }, {
+        "uid" : "2c6f40f2a5de6d24",
+        "name" : "Response",
+        "source" : "2c6f40f2a5de6d24.json",
+        "type" : "application/json",
+        "size" : 136
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element/00000000-0000-0443-0000-001400000006/value",
+      "time" : {
+        "start" : 1641074351463,
+        "stop" : 1641074352305,
+        "duration" : 842
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "e70cfbf6d103638d",
+        "name" : "Request",
+        "source" : "e70cfbf6d103638d.json",
+        "type" : "application/json",
+        "size" : 18
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1641074352305,
+        "stop" : 1641074352321,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "73d0f9729a2bf4c0",
+        "name" : "Request",
+        "source" : "73d0f9729a2bf4c0.json",
+        "type" : "application/json",
+        "size" : 52
+      }, {
+        "uid" : "586a5a3a1b3b0d7f",
+        "name" : "Response",
+        "source" : "586a5a3a1b3b0d7f.json",
+        "type" : "application/json",
+        "size" : 136
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element/00000000-0000-0443-0000-001300000006/click",
+      "time" : {
+        "start" : 1641074352324,
+        "stop" : 1641074352344,
+        "duration" : 20
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1641074352344,
+        "stop" : 1641074352434,
+        "duration" : 90
+      },
+      "status" : "broken",
+      "statusMessage" : "io.appium.uiautomator2.common.exceptions.InvalidSelectorException: java.lang.IllegalArgumentException: Unable to compile '//android.view.View[@index=1]]'. See Cause.\n                \tat io.appium.uiautomator2.core.AccessibilityNodeInfoDumper.findNodes(AccessibilityNodeInfoDumper.java:192)\n                \tat io.appium.uiautomator2.utils.ElementLocationHelpers.getXPathNodeMatch(ElementLocationHelpers.java:119)\n                \tat io.appium.uiautomator2.handler.FindElement.findElement(FindElement.java:88)\n                \tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:67)\n                \tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n                \tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:264)\n                \tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:258)\n                \tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n                \tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n                \tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)\n                \tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)\n                \tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)\n                \tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n                \tat io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)\n                \tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n                \tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n                \tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)\n                \tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)\n                \tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)\n                \tat io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)\n                \tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)\n                \tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)\n                \tat io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)\n                \tat io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)\n                \tat java.lang.Thread.run(Thread.java:764)\n                Caused by: java.lang.IllegalArgumentException: Unable to compile '//android.view.View[@index=1]]'. See Cause.\n                \tat org.jdom2.xpath.jaxen.JaxenCompiled.<init>(JaxenCompiled.java:152)\n                \tat org.jdom2.xpath.jaxen.JaxenXPathFactory.compile(JaxenXPathFactory.java:82)\n                \tat org.jdom2.xpath.XPathFactory.compile(XPathFactory.java:282)\n                \tat io.appium.uiautomator2.core.AccessibilityNodeInfoDumper.findNodes(AccessibilityNodeInfoDumper.java:190)\n                \t... 37 more\n                Caused by: org.jaxen.XPathSyntaxException: Unexpected ']'\n                \tat org.jaxen.BaseXPath.<init>(BaseXPath.java:121)\n                \tat org.jaxen.BaseXPath.<init>(BaseXPath.java:142)\n                \tat org.jdom2.xpath.jaxen.JaxenCompiled.<init>(JaxenCompiled.java:150)\n                \t... 40 more\n                Caused by: class org.jaxen.saxpath.XPathSyntaxException: //android.view.View[@index=1]]: 29: Unexpected ']'\n                \tat org.jaxen.saxpath.base.XPathReader.createSyntaxException(XPathReader.java:1085)\n                \tat org.jaxen.saxpath.base.XPathReader.parse(XPathReader.java:106)\n                \tat org.jaxen.BaseXPath.<init>(BaseXPath.java:116)\n                \t... 42 more\n                ",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "c2c121e0b4aa19cb",
+        "name" : "Request",
+        "source" : "c2c121e0b4aa19cb.json",
+        "type" : "application/json",
+        "size" : 67
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 22,
+    "hasContent" : true,
+    "attachmentsCount" : 32,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-2"
+  }, {
+    "name" : "suite",
+    "value" : "sign up"
+  }, {
+    "name" : "testClass",
+    "value" : "sign up"
+  }, {
+    "name" : "testMethod",
+    "value" : "choosing some tags"
+  }, {
+    "name" : "package",
+    "value" : "sign up"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "device",
+    "value" : "Pixel 4 API 28 9-9"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "e7550145d2e1c881.json",
+  "parameterValues" : [ "Pixel 4 API 28 9-9" ]
+}

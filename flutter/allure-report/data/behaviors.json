@@ -1,0 +1,158 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "like button and assert the number of notes",
+    "uid" : "92cdba00342bf2a1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1641074188061,
+      "stop" : 1641074210407,
+      "duration" : 22346
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "Pixel 4 API 28 9-9" ]
+  }, {
+    "name" : "trash button",
+    "uid" : "7725594e71a0b7a8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1641074210407,
+      "stop" : 1641074233136,
+      "duration" : 22729
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "Pixel 4 API 28 9-9" ]
+  }, {
+    "name" : "report button",
+    "uid" : "27edece39ea1e1b2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1641074233136,
+      "stop" : 1641074255365,
+      "duration" : 22229
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "Pixel 4 API 28 9-9" ]
+  }, {
+    "name" : "commenting",
+    "uid" : "b1592e9aa9aedd43",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1641074255365,
+      "stop" : 1641074277268,
+      "duration" : 21903
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "Pixel 4 API 28 9-9" ]
+  }, {
+    "name" : "edit post",
+    "uid" : "a54a89834b66afb1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1641074277268,
+      "stop" : 1641074299027,
+      "duration" : 21759
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "Pixel 4 API 28 9-9" ]
+  }, {
+    "name" : "age smaller than 18",
+    "uid" : "1b39e335b68676c5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1641074308114,
+      "stop" : 1641074316937,
+      "duration" : 8823
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "Pixel 4 API 28 9-9" ]
+  }, {
+    "name" : "bigger than 150",
+    "uid" : "b4bf2a51f13163b6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1641074316937,
+      "stop" : 1641074325831,
+      "duration" : 8894
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "Pixel 4 API 28 9-9" ]
+  }, {
+    "name" : "correct age",
+    "uid" : "cd1a5d2f001eade9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1641074325832,
+      "stop" : 1641074344470,
+      "duration" : 18638
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "Pixel 4 API 28 9-9" ]
+  }, {
+    "name" : "choosing some tags",
+    "uid" : "e7550145d2e1c881",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1641074344470,
+      "stop" : 1641074352434,
+      "duration" : 7964
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "Pixel 4 API 28 9-9" ]
+  } ]
+}

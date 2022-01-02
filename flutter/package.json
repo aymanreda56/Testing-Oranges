@@ -15,6 +15,7 @@
     "mocha-allure-reporter": "^1.4.0"
   },
   "devDependencies": {
+    "@wdio/allure-reporter": "^7.16.11",
     "@wdio/appium-service": "^7.16.6",
     "@wdio/local-runner": "^7.16.8",
     "@wdio/mocha-framework": "^7.16.6",

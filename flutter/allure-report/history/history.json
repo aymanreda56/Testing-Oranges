@@ -1,0 +1,180 @@
+{
+  "bc2ed66bc879d6d131d32550173aabba" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "92cdba00342bf2a1",
+      "status" : "broken",
+      "statusDetails" : "Can't call click on element with selector \"//android.widget.Button[@index=5]\" because element wasn't found",
+      "time" : {
+        "start" : 1641074188061,
+        "stop" : 1641074210407,
+        "duration" : 22346
+      }
+    } ]
+  },
+  "1bf6385305fd5db88cba59746b34a9d4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a54a89834b66afb1",
+      "status" : "broken",
+      "statusDetails" : "Can't call click on element with selector \"//android.widget.Button[@index=7]\" because element wasn't found",
+      "time" : {
+        "start" : 1641074277268,
+        "stop" : 1641074299027,
+        "duration" : 21759
+      }
+    } ]
+  },
+  "3c3c8e14d822c4d5a41ebd5859b4a9f0" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "cd1a5d2f001eade9",
+      "status" : "broken",
+      "statusDetails" : "Can't call getAttribute on element with selector \"//android.view.View[@content-desc=\"What do you like? Whatever you're into, you'll find here.\"]\" because element wasn't found",
+      "time" : {
+        "start" : 1641074325832,
+        "stop" : 1641074344470,
+        "duration" : 18638
+      }
+    } ]
+  },
+  "b85b5ad31f8b2a770c44344f5e6fcaf7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b4bf2a51f13163b6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1641074316937,
+        "stop" : 1641074325831,
+        "duration" : 8894
+      }
+    } ]
+  },
+  "a0f5abf78f0e7f2f143900252842aaf7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1b39e335b68676c5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1641074308114,
+        "stop" : 1641074316937,
+        "duration" : 8823
+      }
+    } ]
+  },
+  "6cadf2cb77a4c6c761ffef54494240f2" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b1592e9aa9aedd43",
+      "status" : "broken",
+      "statusDetails" : "Can't call click on element with selector \"//android.widget.Button[@index=3]\" because element wasn't found",
+      "time" : {
+        "start" : 1641074255365,
+        "stop" : 1641074277268,
+        "duration" : 21903
+      }
+    } ]
+  },
+  "d4da9c8d7abcd39d5be1b3dab9f0adb2" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e7550145d2e1c881",
+      "status" : "broken",
+      "statusDetails" : "java.lang.IllegalArgumentException: Unable to compile '//android.view.View[@index=1]]'. See Cause.",
+      "time" : {
+        "start" : 1641074344470,
+        "stop" : 1641074352434,
+        "duration" : 7964
+      }
+    } ]
+  },
+  "88794c8eeea2d7d9a7900f04161c2a56" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "27edece39ea1e1b2",
+      "status" : "broken",
+      "statusDetails" : "Can't call click on element with selector \"~Report\" because element wasn't found",
+      "time" : {
+        "start" : 1641074233136,
+        "stop" : 1641074255365,
+        "duration" : 22229
+      }
+    } ]
+  },
+  "f1ad26ae669b8d0c4518615d74863ee9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7725594e71a0b7a8",
+      "status" : "broken",
+      "statusDetails" : "Can't call click on element with selector \"//android.widget.Button[@index=6]\" because element wasn't found",
+      "time" : {
+        "start" : 1641074210407,
+        "stop" : 1641074233136,
+        "duration" : 22729
+      }
+    } ]
+  }
+}
