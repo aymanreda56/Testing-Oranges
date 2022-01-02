@@ -1,0 +1,91 @@
+[ {
+  "uid" : "7725594e71a0b7a8",
+  "name" : "trash button",
+  "time" : {
+    "start" : 1641074210407,
+    "stop" : 1641074233136,
+    "duration" : 22729
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "cd1a5d2f001eade9",
+  "name" : "correct age",
+  "time" : {
+    "start" : 1641074325832,
+    "stop" : 1641074344470,
+    "duration" : 18638
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "a54a89834b66afb1",
+  "name" : "edit post",
+  "time" : {
+    "start" : 1641074277268,
+    "stop" : 1641074299027,
+    "duration" : 21759
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "b4bf2a51f13163b6",
+  "name" : "bigger than 150",
+  "time" : {
+    "start" : 1641074316937,
+    "stop" : 1641074325831,
+    "duration" : 8894
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1b39e335b68676c5",
+  "name" : "age smaller than 18",
+  "time" : {
+    "start" : 1641074308114,
+    "stop" : 1641074316937,
+    "duration" : 8823
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "92cdba00342bf2a1",
+  "name" : "like button and assert the number of notes",
+  "time" : {
+    "start" : 1641074188061,
+    "stop" : 1641074210407,
+    "duration" : 22346
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "e7550145d2e1c881",
+  "name" : "choosing some tags",
+  "time" : {
+    "start" : 1641074344470,
+    "stop" : 1641074352434,
+    "duration" : 7964
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "27edece39ea1e1b2",
+  "name" : "report button",
+  "time" : {
+    "start" : 1641074233136,
+    "stop" : 1641074255365,
+    "duration" : 22229
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "b1592e9aa9aedd43",
+  "name" : "commenting",
+  "time" : {
+    "start" : 1641074255365,
+    "stop" : 1641074277268,
+    "duration" : 21903
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
